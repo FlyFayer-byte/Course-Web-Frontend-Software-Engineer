@@ -3,6 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Study HTML CSS JavaScript</title>
+    <style>
+        code {
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: black;
+            color: aliceblue;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        pre {
+            display: flex;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 50%;
+            background-color: black;
+            color: aliceblue;
+        }
+        .titleForCode {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 3px;
+            background-color: rgb(255, 238, 0);
+            font-weight: 700;
+        }
+        .exempel {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 <h1>Study HTML CSS JavaScript</h1>
@@ -36,25 +65,25 @@
     Змінні, оголошені за допомогою <code>var</code>, мають функціональну або глобальну область видимості. Вони піддаються "спливанню" (hoisting), що означає, що їх оголошення переміщується на початок своєї області видимості під час виконання коду.
 </p>
 <details>
-    <summary>Приклад:</summary>
-    JavaScript
-    <code><pre>console.log(x); // undefined
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>console.log(x); // undefined
 var x = 10;
-console.log(x); // 10</pre></code>
+console.log(x); // 10</code></pre>
 </details>
 <p>
-    У цьому прикладі змінна <code>x</code> піднімається на початок своєї області видимості, тому перший <code>console.log</code> виводить <code>undefined.</code>
+    У цьому прикладі змінна <code>x</code> піднімається на початок своєї області видимості, тому перший <code>console.log</code> виводить <code>undefined</code>.
 </p>
 <p>
     Іншими словами, «спливання» перетворює наш код у цей:
 </p>
 <details>
-    <summary>Приклад:</summary>
-    JavaScript
-    <code><pre>var x;
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>var x;
 console.log(x); // undefined
 x = 10;
-console.log(x); // 10</pre></code>
+console.log(x); // 10</code></pre>
 </details>
 <h4>Оператор let</h4>
 <p>
@@ -64,15 +93,15 @@ console.log(x); // 10</pre></code>
     Змінні, оголошені за допомогою <code>let</code>, мають блочну область видимості. Це означає, що вони доступні тільки у межах блоку коду (зазвичай у фігурних дужках <code>{}</code>), у якому вони оголошені. <code>let</code> не піддається спливанню так, як <code>var</code>.
 </p>
 <details>
-    <summary>Приклад:</summary>
+    <summary class="exempel">Приклад:</summary>
     <p>Змінна <code>y</code> існує тільки всередині блоку <code>if</code>.</p>
-    JavaScript
-    <code><pre>if (true) {
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>if (true) {
   let y = 20;
   console.log(y); // 20
 }
 
-console.log(y); // ReferenceError: y is not defined</pre></code>
+console.log(y); // ReferenceError: y is not defined</code></pre>
 </details>
 <h4>Оператор const</h4>
 <p>
@@ -82,16 +111,16 @@ console.log(y); // ReferenceError: y is not defined</pre></code>
     Тобто змінну міняти не можна, а об’єкт, на який вона посилається, — можна. Хотіли як краще, а вийшло, як завжди.
 </p>
 <details>
-    <summary>Приклад:</summary>
+    <summary class="exempel">Приклад:</summary>
     <p>У цьому прикладі константа <code>x</code> не може бути переназначена, але об’єкт <code>obj</code> може змінюватися.</p>
-    JavaScript
-    <code><pre>const x = 30;
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>const x = 30;
 console.log(x); // 30
 x = 40; // TypeError: Assignment to constant variable.
 
 const obj = { name: 'Alice' };
 obj.name = 'Bob'; // Це допустимо
-console.log(obj.name); // Bob</pre></code>
+console.log(obj.name); // Bob</code></pre>
 </details>
 <h4>Примітивні типи даних</h4>
 <p>
@@ -102,40 +131,40 @@ console.log(obj.name); // Bob</pre></code>
     Представляє будь-які числові значення, включаючи цілі числа і числа з плаваючою крапкою.
 </p>
 <details>
-    <summary>Приклад:</summary>
-    JavaScript
-    <code><pre>let num = 42;
-let pi = 3.14;</pre></code>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let num = 42;
+let pi = 3.14;</code></pre>
 </details>
 <h4>Тип String</h4>
 <p>
     Представляє текстові дані: рядки, символи, емодзі. Все що схоже на рядки — це сюди.
 </p>
 <details>
-    <summary>Приклад:</summary>
-    JavaScript
-    <code><pre>et greeting = "Hello, world!";
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>et greeting = "Hello, world!";
 let facepalm = "🤦";
-let char = 'x';</pre></code>
+let char = 'x';</code></pre>
 </details>
 <h4>Тип Boolean</h4>
 <p>
     Представляє логічні значення <code>true</code> або <code>false</code>.
 </p>
 <details>
-    <summary>Приклад:</summary>
-    JavaScript
-    <code><pre>let isTrue = true;
-let isFalse = false;</pre></code>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let isTrue = true;
+let isFalse = false;</code></pre>
 </details>
 <h4>Тип Null</h4>
 <p>
     Представляє навмисну відсутність значення.
 </p>
 <details>
-    <summary>Приклад:</summary>
-    JavaScript
-    <code><pre>let empty = null;</pre></code>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let empty = null;</code></pre>
 </details>
 <p>
     Якщо тип складається з одного значення, яке означає відсутність значення, то може він все-таки унікальне значення, ніж унікальний тип?
@@ -145,10 +174,10 @@ let isFalse = false;</pre></code>
     Представляє значення змінної, яка була оголошена, але не ініціалізована.
 </p>
 <details>
-    <summary>Приклад:</summary>
-    JavaScript
-    <code><pre>let notAssigned;
-console.log(notAssigned); // undefined</pre></code>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let notAssigned;
+console.log(notAssigned); // undefined</code></pre>
 </details>
 <h3>Порівняння var, let, і const</h3>
 <p>
@@ -197,6 +226,314 @@ console.log(notAssigned); // undefined</pre></code>
     Примітивні типи даних дозволяють працювати з основними структурами даних, забезпечуючи базову функціональність, необхідну для створення складних додатків.
 </p>
 <h3>Числа і операції з ними</h3>
-
+<h4>Тип Number</h4>
+<p>
+    Числа в JavaScript відіграють важливу роль при роботі з даними і виконанні обчислень. Мова надає безліч можливостей для роботи з числами, включаючи різні типи операцій і вбудовані методи.
+</p>
+<p>
+    В JavaScript існує один тип даних для чисел — <b>Number</b>. Цей тип даних представляє як цілі числа, так і числа з плаваючою крапкою. Додатково, починаючи з 2020 року, був введений тип <em>BigInt</em> для роботи з дуже великими цілими числами.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let integer = 42;                   // Ціле число
+let float = 3.14;                   // Число з плаваючою крапкою
+let bigInt = 12345678901234567890n; // Велике ціле число</code></pre>
+</details>
+<h4>Операції з числами</h4>
+<p>Арифметичні операції:</p>
+<table>
+    <thead>
+    <tr>
+      <th>Операція</th>
+      <th>Синтаксис</th>
+      <th>Опис</th>
+      <th>Приклад</th>
+      <th>Результат</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Додавання</td>
+      <td>a + b</td>
+      <td>Додає два числа</td>
+      <td>5 + 3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Віднімання</td>
+      <td>a - b</td>
+      <td>Віднімає одне число від іншого</td>
+      <td>10 - 4</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Множення</td>
+      <td>a * b</td>
+      <td>Множить два числа</td>
+      <td>7 * 3</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>Ділення</td>
+      <td>a / b</td>
+      <td>Ділить одне число на інше</td>
+      <td>20 / 5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Залишок від ділення</td>
+      <td>a % b</td>
+      <td>Повертає залишок від ділення</td>
+      <td>10 % 3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Піднесення до степеня</td>
+      <td>a ** b</td>
+      <td>Підносить число до степеня</td>
+      <td>2 ** 3</td>
+      <td>8</td>
+    </tr>
+    </tbody>
+</table>
+<h4>Інкремент і декремент</h4>
+<table>
+    <thead>
+    <tr>
+      <th>Операція</th>
+      <th>Синтаксис</th>
+      <th>Опис</th>
+      <th>Приклад</th>
+      <th>Результат</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Інкремент</td>
+      <td>++a</td>
+      <td>Збільшує значення на одиницю (префіксний)</td>
+      <td>let a = 5;<br>++a;</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Інкремент</td>
+      <td>a++</td>
+      <td>Збільшує значення на одиницю (постфіксний)</td>
+      <td>let a = 5;<br>a++;</td>
+      <td>5 (і потім 6)</td>
+    </tr>
+    <tr>
+      <td>Декремент</td>
+      <td>--b</td>
+      <td>Зменшує значення на одиницю (префіксний)</td>
+      <td>let b = 5;<br>--b;</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Декремент</td>
+      <td>b--</td>
+      <td>Зменшує значення на одиницю (постфіксний)</td>
+      <td>let b = 5;<br>b--;</td>
+      <td>5 (і потім 4)</td>
+    </tr>
+</tbody>
+</table>
+<h4>Комбіновані операції</h4>
+<table>
+    <thead>
+    <tr>
+      <th>Операція</th>
+      <th>Синтаксис</th>
+      <th>Опис</th>
+      <th>Приклад</th>
+      <th>Результат</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Додавання з присвоєнням</td>
+      <td>a += b</td>
+      <td>Додає і присвоює результат</td>
+      <td>let x = 10;<br>x += 5;</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Віднімання з присвоєнням</td>
+      <td>a -= b</td>
+      <td>Віднімає і присвоює результат</td>
+      <td>let x = 10;<br>x -= 3;</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Множення з присвоєнням</td>
+      <td>a *= b</td>
+      <td>Множить і присвоює результат</td>
+      <td>let x = 10;<br>x *= 2;</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Ділення з присвоєнням</td>
+      <td>a /= b</td>
+      <td>Ділить і присвоює результат</td>
+      <td>let x = 10;<br>x /= 2;</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Залишок з присвоєнням</td>
+      <td>a %= b</td>
+      <td>Знаходить залишок і присвоює результат</td>
+      <td>let x = 10;<br>x %= 3;</td>
+      <td>1</td>
+    </tr>
+    </tbody>
+</table>
+<h3>Вбудовані методи</h3>
+<p>
+    В JavaScript є вбудований об’єкт <code>Math</code> для виконання різних математичних операцій.
+</p>
+<h4>1. Math.round():</h4>
+<p>Округляє число до найближчого цілого.</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let rounded = Math.round(4.6); // 5</code></pre>
+</details>
+<h4>2. Math.ceil():</h4>
+<p>
+    Округляє число вгору до найближчого цілого.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let ceil = Math.ceil(4.2); // 5</code></pre>
+</details>
+<h4>3. Math.floor():</h4>
+<p>
+    Округляє число вниз до найближчого цілого.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let floor = Math.floor(4.8); // 4</code></pre>
+</details>
+<h4>4.Math.random():</h4>
+<p>
+    Повертає випадкове число в діапазоні від 0 до 1.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let random = Math.random();</code></pre>
+</details>
+<h4>5. Math.max() і Math.min():</h4>
+<p>
+    Повертають максимальне і мінімальне значення із набору чисел.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let max = Math.max(1, 2, 3, 4); // 4
+let min = Math.min(1, 2, 3, 4); // 1</code></pre>
+</details>
+<h4>6. Math.sqrt():</h4>
+<p>
+    Повертає квадратний корінь числа.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let sqrt = Math.sqrt(16); // 4</code></pre>
+</details>
+<h4>7. Math.pow():</h4>
+<p>
+    Повертає число, піднесене до вказаного степеня.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let pow = Math.pow(2, 3); // 8</code></pre>
+</details>
+<h3>Парсинг рядків у числа</h3>
+<h4>Функція parseInt():</h4>
+<p>
+    Перетворює рядок у ціле число.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let int = parseInt('123'); // 123</code></pre>
+</details>
+<h4>Функція parseFloat():</h4>
+<p>
+    Перетворює рядок у число з плаваючою крапкою. 
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let float = parseFloat('3.14'); // 3.14</code></pre>
+</details>
+<h4>Функція Number():</h4>
+<p>
+    Перетворює значення у число.
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let num = Number('42'); // 42</code></pre>
+</details>
+<h3>Перевірка значень</h3>
+<h4>Функція isNaN():</h4>
+<p>
+    Перевіряє, чи є значенням <b>NaN</b> (Not-a-Number).
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let isNotNumber = isNaN('hello'); // true</code></pre>
+</details>
+<h4>Функція isFinite():</h4>
+<p>
+    Перевіряє, чи є значення кінцевим числом (безкінечність чи ні).
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let finite = isFinite(10); // true
+let notFinite = isFinite(Infinity); // false</code></pre>
+</details>
+<h3>Особливості чисел у JavaScript</h3>
+<h4>1. Числові межі</h4>
+<p>
+    У JavaScript числа представлені у форматі з плаваючою точкою подвійної точності, що має певні обмеження:
+</p>
+<ul>
+    <li>Максимальне значення: <b>Number.MAX_VALUE</b></li>
+    <li>Мінімальне значення: <b>Number.MIN_VALUE</b></li>
+    <li>Позитивна безкінечність: <b>Infinity</b></li>
+    <li>Негативна безкінечність: <b>-Infinity</b></li>
+    <li>Не число (<b>NaN</b>): значення, яке не є числом</li>
+</ul>
+<h4>2. Точність чисел</h4>
+<p>
+    Робота з числами з плаваючою крапкою може призвести до проблем із точністю:
+</p>
+<details>
+    <summary class="exempel">Приклад:</summary>
+    <span class="titleForCode">JavaScript</span>
+    <pre><code>let sum = 0.1 + 0.2;
+console.log(sum); // 0.30000000000000004</code></pre>
+</details>
+<p>
+    Таке є у всіх мовах програмування – JavaScript не виключення.
+</p>
+<h4>3. Безпечні цілі числа</h4>
+<p>
+    У JavaScript є поняття "безпечних" цілих чисел, які можуть бути точно представлені у вигляді чисел з плаваючою крапкою:
+</p>
+<ul>
+    <li>Максимальне безпечне ціле: <code>Number.MAX_SAFE_INTEGER (253 - 1)</code></li>
+    <li>Мінімальне безпечне ціле: <code>Number.MIN_SAFE_INTEGER (-(253 - 1))</code></li>
+</ul>
 </body>
 </html>
