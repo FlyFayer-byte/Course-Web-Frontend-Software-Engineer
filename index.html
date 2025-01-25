@@ -2,26 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Study HTML CSS JavaScript</title>
+    <title>Study HTML, CSS & JavaScript</title>
     <style>
+        html {
+            background-color:antiquewhite;
+        }
+        body {
+            background: inherit;
+            color: #172b53;
+            font-family: Arial, Helvetica, sans-serif;
+        }
         p {
 
         }
         code {
-            border: 1px solid black;
-            border-radius: 5px;
-            background-color: black;
-            color: aliceblue;
-            padding-left: 2px;
-            padding-right: 2px;
+            color: #000;
+            background-color: #fff;
+            background-image: linear-gradient(#fff, #f7fafe);
+            box-shadow: 0 0 0 1px #4a678ca6 inset;
+            position: relative;
+            display: inline;
+            padding: 3px 5px;
+            border-radius: 3px;
+            font-family: Menlo, Monaco, Consolas, 'Courier New', 'Ubuntu Mono', monospace;
+
         }
         pre {
             display: flex;
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 10px;
+            padding: 10px 0;
             min-width: 50%;
-            background-color: black;
             color: aliceblue;
         }
         .titleForCode {
@@ -34,16 +43,71 @@
         .exempel {
             margin-bottom: 10px;
         }
+        .lesson-note {
+            margin-top: 1.5em;
+            margin-bottom: 1.8em;
+            padding: 9px;
+            border-radius: 7px;
+            background-color: transparent;
+        }
+        .lesson-note--important {
+            background-image: linear-gradient(#ffedec, #ffdede);
+        }
+        .lesson-note__container {
+            box-shadow: 0 0 0 1px #fe0100b3 inset;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .lesson-note__head {
+            margin-bottom: -.2em;
+            padding: 1.05em 1.3em 0;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        .lesson-note__content {
+            padding: 1em 1.3em;
+        }
     </style>
 </head>
 <body>
-<h1>Study HTML CSS JavaScript</h1>
+<h1>Study HTML, CSS & JavaScript</h1>
     <hr>
 <h2>Html</h2>
     <hr>
 <h2>CSS</h2>
     <hr>
-<h2>Вступ до JavaScript</h2>
+<!--1. Вступ до JavaScript-->
+<h2>1. Вступ до JavaScript</h2>
+    <!--1.1 Історія JavaScript і стандарту ECMAScript-->
+    <h3>1.1 Історія JavaScript і стандарту ECMAScript</h3>
+    <p>
+        <span style="font-weight: bold;">JavaScript</span> — це одна із найпопулярніших мов програмування у світі, і її значення у веб-розробці важко переоцінити. Вона забезпечує інтерактивність і динамічність веб-сторінок, робить можливими сучасні веб-застосунки і підтримує широкий спектр технологій та платформ.
+    </p>
+    <div class="lesson-note lesson-note--important">
+        <div class="lesson-note__container">
+          <div class="lesson-note__head">Важливо!</div>
+            <div class="lesson-note__content">
+                <p>
+                    Існує стандарт, який називається ECMAScript, і у цього стандарту може бути багато реалізацій. Одна з них — це JavaScript. Так правильно, але ви можете сміливо казати JavaScript або навіть просто JS, а всіх, хто вас виправляє називати занудами :)
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--1.2 Революція JavaScript (ES6): 2015 рік-->
+    <h3>1.2 Революція JavaScript (ES6): 2015 рік</h3>
+    <p>
+        2015 рік ознаменувався випуском ECMAScript 2015 (ES6/ES2015), який став одним із найзначніших оновлень мови. ES6 приніс багато нових можливостей і покращень, включаючи:
+    </p>
+    <ul>
+        <li><b>Класи</b>: підтримка об'єктно-орієнтованого програмування</li>
+        <li><b>Модулі</b>: можливість імпорту та експорту модулів</li>
+        <li><b>Стрілкові функції</b>: новий синтаксис для визначення функцій</li>
+        <li><b>Константи та блочна область видимості</b>: введення <code>const</code> і <code>let</code></li>
+        <li><b>Шаблонні рядки</b>: зручний спосіб створення рядків з підстановкою значень</li>
+        <li><b>Деструктуризація</b>: легкий спосіб витягування значень з масивів та об'єктів</li>
+        <li><b>Promises</b>: підтримка асинхронного програмування</li>
+    </ul>
+
 <h3>Змінні у JavaScript</h3>
 <p>
     <em>JavaScript</em> — це гнучка і динамічна мова програмування, яка підтримує різні способи оголошення змінних і роботи з типами даних. У цій лекції ми розглянемо три основні способи оголошення змінних (<code>var</code>, <code>let</code>, <code>const</code>) і базові примітивні типи даних у JavaScript.
@@ -538,5 +602,7 @@ console.log(sum); // 0.30000000000000004</code></pre>
     <li>Максимальне безпечне ціле: <code>Number.MAX_SAFE_INTEGER (253 - 1)</code></li>
     <li>Мінімальне безпечне ціле: <code>Number.MIN_SAFE_INTEGER (-(253 - 1))</code></li>
 </ul>
+<h3>Рядки та методи роботи з ними</h3>
+<h4>4.1 Вступ до рядків</h4>
 </body>
 </html>
