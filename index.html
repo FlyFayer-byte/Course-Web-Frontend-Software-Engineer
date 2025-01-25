@@ -14,12 +14,18 @@
         }
         h2 {
             color: blue;
+            padding-left: 10px;
+            margin: 0;
         }
         h3 {
             color: darkblue;
+            padding-left: 20px;
+            margin-bottom: 0;
         }
         h4 {
             font-style: italic;
+            padding-left: 30px;
+            margin-bottom: 0;
         }
         code {
             color: #000;
@@ -904,6 +910,119 @@ let words = str.split(' ');
 console.log(words); // ['Hello,', 'world!']</code></pre>
     </details>
     </section>
-    
+<!--5. Гілки-->
+<h2>5. Гілки</h2>
+    <!--5.1 Умовний оператор if-->
+    <section>
+    <h3>5.1 Умовний оператор if</h3>
+    <p>
+        Гілки (або умовні оператори) в JavaScript дозволяють виконувати різні блоки коду залежно від заданих умов. Це одна з фундаментальних концепцій у програмуванні, яка робить код більш динамічним і інтерактивним.
+    </p>
+    <p>
+        Найпростіший спосіб створення гілки в JavaScript — використання умовного оператора <code>if</code>. Він виконує блок коду, якщо вказана умова істинна (<code>true</code>). 
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: red;">if</span> (<span style="color: green;">умова</span>) {
+  <span style="color: green;">// код, який виконається, якщо умова істинна</span>
+}</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let age = 18;
+if (age >= 18) {
+  console.log("Ви повнолітній.");
+}</code></pre>
+    </details>
+    </section>
+    <!--5.2 Оператор if...else-->
+    <section>
+    <h3>5.2 Оператор if...else</h3>
+    <p>
+        Оператор <code>if...else</code> дозволяє виконувати один блок коду, якщо умова істинна, і інший блок коду, якщо умова хибна.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: red;">if</span> (<span style="color: green;">умова</span>) {
+  <span style="color: green;">// код, який виконається, якщо умова істинна</span>
+} <span style="color: red;">else</span> {
+  <span style="color: red;">// код, який виконається, якщо умова хибна</span>
+}</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let age = 17;
+
+if (age >= 18) {
+  console.log("Ви повнолітній.");
+} else {
+  console.log("Ви неповнолітній.");
+}</code></pre>
+    </details>
+    </section>
+    <!--5.3 Оператор if...else if...else-->
+    <section>
+    <h3>5.3 Оператор if...else if...else</h3>
+    <p>
+        Оператор <code>if...else if...else</code> дозволяє перевіряти кілька умов послідовно та виконувати відповідні блоки коду.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: red;">if</span>(<span style="color: green;">умова1</span>) {
+  <span style="color: green;">// код, який виконається, якщо умова1 істинна</span>
+} <span style="color: red;">else</span> if (<span style="color: blue;">умова2</span>) {
+  <span style="color: blue;">// код, який виконається, якщо умова2 істинна</span>
+} <span style="color: red;">else</span> {
+  <span style="color: red;">// код, який виконається, якщо жодна умова не істинна</span>
+}</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>const mark = 95;
+
+if (mark >= 90) {
+    console.log("Відмінно");
+} else if (mark >= 75 && mark < 90) {
+    console.log("Добре");
+} else if (mark >=60 && mark < 75) {
+    console.log("Задовільно");
+} else {
+   console.log("Незадовільно"); 
+}</code></pre>
+    </details>
+    </section>
+    <!--5.4 Тернарний оператор-->
+    <section>
+    <h3>5.4 Тернарний оператор</h3>
+    <p>
+        Тернарний оператор <code>(?:)</code> — це скорочена форма умовного оператора <code>if...else</code>. Він використовується для простих умов і повертає одне з двох значень залежно від умови.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: red;">condition</span> ? <span style="color: green;">value1</span> : <span style="color: blue;">value2</span></code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let age = 18;
+let access = (age >= 18) ? "доступ дозволено" : "доступ заборонено";
+console.log(access); // "доступ дозволено"</code></pre>
+    </details>
+    </section>
+<!--6. Цикли у JavaScript-->
+<h2>6. Цикли у JavaScript</h2>
+    <!--6.1 Цикл while-->
+    <section>
+    <h3>6.1 Цикл while</h3>
+    <p>
+        Цикли у JavaScript дозволяють виконувати блок коду багаторазово, поки виконується визначена умова. Це важлива частина програмування, яка допомагає автоматизувати повторювані завдання.
+    </p>
+    <p>
+        Цикл <code>while</code> виконує блок коду доти, поки умова істинна (<code>true</code>).
+    </p>
+    </section>
 </body>
 </html>
