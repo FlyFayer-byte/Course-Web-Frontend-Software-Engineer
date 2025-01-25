@@ -12,8 +12,14 @@
             color: #172b53;
             font-size: 18px;
         }
-        p {
-
+        h2 {
+            color: blue;
+        }
+        h3 {
+            color: darkblue;
+        }
+        h4 {
+            font-style: italic;
         }
         code {
             color: #000;
@@ -738,6 +744,7 @@ console.log(sum); // 0.30000000000000004</code></pre>
     </section>
 <!--4. Рядки та методи роботи з ними-->
 <h2>4. Рядки та методи роботи з ними</h2>
+    <!--4.1 Вступ до рядків-->
     <section>
     <h3>4.1 Вступ до рядків</h3>
     <p>
@@ -750,6 +757,153 @@ console.log(sum); // 0.30000000000000004</code></pre>
 let doubleQuote = "Hello, World!";
 let backticks = `Hello, World!`;</code></pre>
     </details>
+    <p>
+        В об'єкта рядка можна викликати такі методи:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Метод</th>
+                <th>Опис</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>length</td>
+                <td>Повертає довжину рядка</td>
+            </tr>
+            <tr>
+                <td>charAt(index)</td>
+                <td>Повертає символ, що знаходиться на вказаній позиції</td>
+            </tr>
+            <tr>
+                <td>toUpperCase()</td>
+                <td>Перетворює рядок у верхній регістр</td>
+            </tr>
+            <tr>
+                <td>toLowerCase()</td>
+                <td>Перетворює рядок у нижній регістр</td>
+            </tr>
+            <tr>
+            <td>indexOf(substring)</td>
+                <td>Повертає індекс першого входження підрядка або -1, якщо не знайдено</td>
+            </tr>
+            <tr>
+                <td>includes(substring)</td>
+                <td>Перевіряє, чи містить рядок вказаний підрядок, повертає true або false</td>
+            </tr>
+            <tr>
+                <td>slice(start, end)</td>
+                <td>Витягує частину рядка і повертає новий рядок</td>
+            </tr>
+            <tr>
+                <td>replace(searchValue, newValue)</td>
+                <td>Замінює вказаний підрядок на новий підрядок</td>
+            </tr>
+            <tr>
+                <td>split(separator)</td>
+                <td>Розбиває рядок на масив підрядків, використовуючи вказаний розділювач</td>
+            </tr>
+            <tr>
+                <td>trim()</td>
+                <td>Видаляє пробіли з початку та кінця рядка</td>
+            </tr>
+        </tbody>
+    </table>
     </section>
+    <!--4.2 Основні методи роботи з рядками-->
+    <section>
+    <h3>4.2 Основні методи роботи з рядками</h3>
+    <p>
+        Приклади використання методів
+    </p>
+    <h4>
+        Властивість length
+    </h4>
+    <p>
+        Повертає довжину рядка:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = 'Hello';
+console.log(str.length); // 5</code></pre>
+    </details>
+    <h4>Метод charAt(index)</h4>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = 'Hello';
+let result = str.charAt(1);
+console.log(result);        // 'e'</code></pre>
+    </details>
+    <h4>Метод toUpperCase() та toLowerCase():</h4>
+    <p>
+        Перетворюють рядок у верхній або нижній регістр:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = 'Hello';
+console.log(str.toUpperCase()); // 'HELLO'
+console.log(str.toLowerCase()); // 'hello'</code></pre>
+    </details>
+    <h4>Метод indexOf(substring)</h4>
+    <p>
+        Повертає індекс першого входження підрядка або -1, якщо підрядок не знайдено:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = 'Hello, world!';
+let result = str.indexOf('world');
+console.log(result); // 7</code></pre>
+    </details>
+    <h4>Метод includes(substring)</h4>
+    <p>
+        Перевіряє, чи містить рядок вказаний підрядок, повертає true або false:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = 'Hello, world!';
+let result = str.includes('world');
+console.log(result); // true</code></pre>
+    </details>
+    <h4>Метод trim()</h4>
+    <p>
+        Видаляє пробіли з початку та кінця рядка:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = '   Hello, world!   ';
+console.log(str.trim()); // 'Hello, world!'</code></pre>
+    </details>
+    <h4>
+        Метод replace(searchValue, newValue)
+    </h4>
+    <p>
+        Замінює вказаний підрядок на новий підрядок:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = 'Hello, world!';
+console.log(str.replace('world', 'JavaScript')); // 'Hello, JavaScript!'</code></pre>
+    </details>
+    <h4>Метод split(separator)</h4>
+    <p>
+        Розбиває рядок на масив підрядків, використовуючи вказаний розділювач:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let str = 'Hello, world!';
+let words = str.split(' ');
+console.log(words); // ['Hello,', 'world!']</code></pre>
+    </details>
+    </section>
+    
 </body>
 </html>
