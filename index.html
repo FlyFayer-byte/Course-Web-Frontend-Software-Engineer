@@ -1023,6 +1023,533 @@ console.log(access); // "доступ дозволено"</code></pre>
     <p>
         Цикл <code>while</code> виконує блок коду доти, поки умова істинна (<code>true</code>).
     </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code>while (<span style="color: green;">condition</span>) {
+  // код, який виконуватиметься, поки умова істинна
+}</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let i = 0;
+while (i &lt; 5) {
+  console.log(`Ітерація номер ${i}`);
+  i++;
+}
+
+// Вивід:
+// Ітерація номер 0
+// Ітерація номер 1
+// Ітерація номер 2
+// Ітерація номер 3
+// Ітерація номер 4</code></pre>
+    </details>
+    <p>
+        <b>У цьому прикладі:</b>
+    </p>
+    <ul>
+        <li>Цикл продовжує виконання, поки значення <code>i</code> менше 5</li>
+        <li>Всередині циклу значення <code>i</code> збільшується на 1 після кожної ітерації</li>
+    </ul>
+    </section>
+    <!--6.2 Виконуємо блок коду n разів-->
+    <section>
+    <h3>6.2 Виконуємо блок коду n разів</h3>
+    <p>
+        Дуже часто виникає ситуація, коли блок коду потрібно виконати визначену кількість разів. Цей код можна записати у вигляді циклу <code>wihle</code>:
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: blueviolet;">let i = 0;</span>
+<span style="color: red;">while</span> (<span style="color: green;">i &lt; 5</span>) {
+  console.log(`Ітерація номер ${i}`);
+  <span style="color: blue;">i++;</span>
+}</code></pre>
+    </details>
+    <p>
+        У загальному вигляді це буде виглядати так:
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: blueviolet;">ініціалізація;</span>
+<span style="color: red;">while</span> (<span style="color: green;">умова</span>) {
+    блок коду;
+  <span style="color: blue;">крок;</span>
+}</code></pre>
+    </details>
+    </section>
+    <!--6.3 Цикл for-->
+    <section>
+    <h3>6.3 Цикл for</h3>
+    <p>
+        Цикл <code>for</code> — один із найбільш часто використовуваних циклів у JavaScript. Він спеціально створений для того, щоб повторювати блок коду визначену кількість разів.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: red;">for</span> (<span style="color: blueviolet;">ініціалізація</span>; <span style="color: green;">умова</span>; <span style="color: blue;">крок</span>) {
+  // код, який виконуватиметься на кожній ітерації
+}</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>for (let i = 0; i < 5; i++) {
+  console.log(`Ітерація номер ${i}`);
+}
+// Вивід:
+// Ітерація номер 0
+// Ітерація номер 1
+// Ітерація номер 2
+// Ітерація номер 3
+// Ітерація номер 4</code></pre>
+    </details>
+    <p>
+        <b>Пояснення:</b>
+    </p>
+    <ul>
+        <li><code>let i = 0</code> — ініціалізація змінної <code>i</code>, яка буде лічильником ітерацій</li>
+        <li><code>i &lt; 5</code> — умова, при якій цикл продовжує виконання. Цикл зупиниться, коли <code>i</code> стане рівним 5</li>
+        <li><code>i++</code> — крок, який виконується після кожної ітерації, збільшуючи значення <code>i</code> на 1</li>
+    </ul>
+    </section>
+    <!--6.4 Цикл do...while-->
+    <section>
+    <h3>6.4 Цикл do...while</h3>
+    <p>
+        Цикл <code>do...while</code> схожий на цикл <code>while</code>, але з тією різницею, що блок коду виконується хоча б один раз, перш ніж перевіряється умова.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: red;">do</span> {
+  // код, який виконається хоча б один раз
+} <span style="color: red;">while</span> (<span style="color: green;">умова</span>);</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let i = 0;
+do {
+  console.log(`Ітерація номер ${i}`);
+  i++;
+} while (i < 5);
+
+// Вивід:
+// Ітерація номер 0
+// Ітерація номер 1
+// Ітерація номер 2
+// Ітерація номер 3
+// Ітерація номер 4</code></pre>
+    </details>
+    <p>
+        <b>У цьому прикладі:</b>
+    </p>
+    <ul>
+        <li>Блок коду всередині <code>do</code> виконається хоча б один раз, навіть якщо умова спочатку хибна</li>
+        <li>Після виконання блоку коду умова перевіряється, і якщо вона істинна, цикл триває</li>
+    </ul>
+    </section>
+    <!--6.5 Порівняння циклів-->
+    <section>
+    <h3>6.5 Порівняння циклів</h3>
+    <table>
+        <thead>
+        <tr>
+          <th>Цикл</th>
+          <th>Коли використовувати</th>
+          <th>Особливості</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>for</td>
+          <td>Коли відома кількість ітерацій</td>
+          <td>Компактний синтаксис, зручно для масивів</td>
+        </tr>
+        <tr>
+          <td>while</td>
+          <td>Коли кількість ітерацій заздалегідь невідома</td>
+          <td>Умова перевіряється перед кожною ітерацією</td>
+        </tr>
+        <tr>
+          <td>do-while</td>
+          <td>Коли потрібно виконати блок коду хоча б один раз</td>
+          <td>Умова перевіряється після виконання блоку коду</td>
+        </tr>
+        </tbody>
+      </table>
+      <p>
+        <b>Приклади використання циклів</b>
+      </p>
+      <details>
+        <summary class="exempel">Перебір масиву за допомогою <code>for</code>:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let array = [1, 2, 3, 4, 5];
+for (let i = 0; i &lt; array.length; i++) {
+  console.log(array[i]);
+}
+
+// Вивід: 1 2 3 4 5</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Використання <code>while</code> для очікування умови:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let n = 0;
+let x = 0;
+while (n &lt; 3) {
+  n++;
+  x += n;
+}
+
+console.log(x); // 6 (1 + 2 + 3)</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Використання <code>do-while</code> для виконання хоча б однієї ітерації:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while (i &lt; 0);
+
+// Вивід: 0 (цикл виконано один раз, незважаючи на хибну умову)</code></pre>
+    </details>
+    </section>
+<!--7. Логічні оператори-->
+<h2>7. Логічні оператори</h2>
+    <!--7.1 Булева алгебра-->
+    <section>
+    <h3>7.1 Булева алгебра</h3>
+    <p>
+        У JavaScript є спеціальний логічний тип даних, за допомогою якого можна перевіряти істинність умов і виразів. У JavaScript він позначається ключовим словом Boolean і використовується для представлення одного з двох значень: <code>true</code> (Істина) або <code>false</code> (Неправда).
+    </p>
+    <p>
+        Цей тип даних надзвичайно корисний у програмуванні для управління порядком виконання програми за допомогою умовних операторів, таких як <code>if</code>, <code>else</code>, а також для управління циклами та іншими структурами.
+    </p>
+    <p>
+        Логічні ж оператори використовуються для виконання логічних операцій над булевими значеннями.
+    </p>
+    <p>
+        Основні логічні оператори:
+    </p>
+    <ul>
+        <li>Логічне <b>І</b> (позначається <code>&&</code>)</li>
+        <li>Логічне <b>АБО</b> (позначається <code>||</code>)</li>
+        <li>Логічне <b>НЕ</b> (позначається <code>!</code>)</li>
+    </ul>
+    </section>
+    <!--7.2 Логічне І (&&)-->
+    <section>
+    <h3>7.2 Логічне І (&&)</h3>
+    <p>
+        <b>Оператор логічного І</b> повертає <code>true</code>, якщо обидва операнди істинні. В іншому випадку він повертає <code>false</code>.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code>a <span style="color: red;">&&</span> b</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let a = true;
+let b = false;
+console.log(a && b); // false</code></pre>
+    </details>
+    <details open>
+        <summary class="exempel">Застосування:</summary>
+        <p>
+            Оператор <code>&&</code> часто використовується в умовних інструкціях, щоб перевірити виконання кількох умов одночасно. 
+        </p>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let age = 25;
+
+let hasLicense = true;
+
+if (age >= 18 && hasLicense) {
+    console.log('Ви можете водити машину.');
+}</code></pre>
+    </details>
+    </section>
+    <!--7.3 Логічне АБО (||)-->
+    <section>
+    <h3>7.3 Логічне АБО (||)</h3>
+    <p>
+        <b>Оператор логічного АБО</b> повертає <code>true</code>, якщо хоча б один з операндів істинний. Якщо обидва операнди хибні, він повертає <code>false</code>.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code>a <span style="color: red;">||</span> b</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let a = true;
+let b = false;
+console.log(a || b); // true</code></pre>
+    </details>
+    <details open>
+        <summary class="exempel">Застосування:</summary>
+        <p>
+            Оператор <code>||</code> використовується для перевірки виконання хоча б однієї з кількох умов. 
+        </p>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let isWeekend = true;
+let isHoliday = false;
+
+if (isWeekend || isHoliday) {
+  console.log('Сьогодні вихідний.');
+}</code></pre>
+    </details>
+    </section>
+    <!--7.4 Логічне НЕ (!)-->
+    <section>
+    <h3>
+        7.4 Логічне НЕ (!)
+    </h3>
+    <p>
+        <b>Оператор логічного НЕ</b> повертає <code>true</code>, якщо операнд хибний, і <code>false</code>, якщо операнд істинний. Він інвертує булеве значення.
+    </p>
+    <details open>
+        <summary class="exempel">Синтаксис:</summary>
+        <pre><code><span style="color: red;">!</span>a</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let a = true;
+console.log(!a); // false</code></pre>
+    </details>
+    <details open>
+        <summary class="exempel">Застосування:</summary>
+        <p>
+            Оператор <code>!</code> часто використовується для інвертування булевих значень і перевірки негативних умов. 
+        </p>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let isRaining = false;
+
+if (!isRaining) {
+  console.log('Можна йти на прогулянку.');
+}</code></pre>
+    </details>
+    </section>
+    <!--7.5 Оператори порівняння-->
+    <section>
+    <h3>
+        7.5 Оператори порівняння
+    </h3>
+    <p>
+        Для виконання логічних операцій часто використовуються порівняльні оператори, які повертають булеві значення:
+    </p>
+    <table>
+        <thead>
+        <tr>
+          <th>Оператор</th>
+          <th>Опис</th>
+          <th>Приклад</th>
+          <th>Результат</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>==</td>
+          <td>Рівно</td>
+          <td>5 == '5'</td>
+          <td>true</td>
+        </tr>
+        <tr>
+          <td>===</td>
+          <td>Строго рівно (без приведення типів)</td>
+          <td>5 === '5'</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>!=</td>
+          <td>Не рівно</td>
+          <td>5 != '5'</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>!==</td>
+          <td>Строго не рівно (без приведення типів)</td>
+          <td>5 !== '5'</td>
+          <td>true</td>
+        </tr>
+        <tr>
+          <td>&gt;</td>
+          <td>Більше</td>
+          <td>10 &gt; 5</td>
+          <td>true</td>
+        </tr>
+        <tr>
+          <td>&lt;</td>
+          <td>Менше</td>
+          <td>10 &lt; 5</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>&gt;=</td>
+          <td>Більше або рівно</td>
+          <td>10 &gt;= 10</td>
+          <td>true</td>
+        </tr>
+        <tr>
+          <td>&lt;=</td>
+          <td>Менше або рівно</td>
+          <td>10 &lt;= 5</td>
+          <td>false</td>
+        </tr>
+        </tbody>
+      </table>
+    <p>
+        <b>Приклади використання порівняльних операторів</b>
+    </p>
+    <details>
+        <summary class="exempel">Оператор <code>==</code> та <code>===</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>console.log(5 == '5');  // true (приведення типів)
+console.log(5 === '5'); // false (строге порівняння)</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Оператор <code>!=</code> та <code>!==</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>console.log(5 != '5');  // false (приведення типів)
+console.log(5 !== '5'); // true (строге порівняння)</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Оператори <code>></code>, <code>&lt;</code>, <code>>=</code>, <code>&lt;=</code></code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>console.log(10 > 5);    // true
+console.log(10 &lt; 5);    // false
+console.log(10 >= 10);  // true
+console.log(10 &lt;= 5);   // false</code></pre>
+    </details>
+    </section>
+<!--8. Масиви у JavaScript-->
+<h2>8. Масиви у JavaScript</h2>
+    <!--8.1 Створення масивів-->
+    <section>
+    <h3>8.1 Створення масивів</h3>
+    <p>
+        <b>Масиви у JavaScript</b> — структура даних, яка дозволяє зберігати впорядковані колекції значень. <span style="color: green;">Ці значення можуть бути будь-якого типу, включаючи числа, рядки, об'єкти та навіть інші масиви</span>. Масиви у JavaScript динамічно змінювані, тобто їх розмір може змінюватися в процесі виконання програми.
+    </p>
+    <p>
+        <b>Створення та ініціалізація масивів:</b>
+    </p>
+    <details>
+        <summary class="exempel">Використання літерала масиву</summary>
+        <p>
+            Найпростіший спосіб створення масиву — це використання квадратних дужок <code>[]</code>:    
+        </p>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let array1 = []; // порожній масив
+let array2 = [1, 2, 3]; // масив з трьома елементами</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Використання конструктора масиву</summary>
+        <p>
+            Конструктор масиву <code>Array</code> дозволяє створювати масиви за допомогою функції:   
+        </p>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let array1 = new Array(); // порожній масив
+let array2 = new Array(3); // масив з довжиною 3 (усі елементи undefined)
+let array3 = new Array(1, 2, 3); // масив з трьома елементами</code></pre>
+    </details>
+    <details>
+        <summary class="exempel">Заповнення масиву значеннями</summary>
+        <p>
+            Можна заповнити масив значеннями після його створення:   
+        </p>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let array = [];
+array[0] = 'apple';
+array[1] = 'banana';
+array[2] = 'cherry';</code></pre>
+    </details>
+    </section>
+    <!--8.2 Доступ до елементів масиву-->
+    <section>
+    <h3>8.2 Доступ до елементів масиву</h3>
+    <p>
+        Елементи масиву індексуються, починаючи з нуля. Доступ до елементів здійснюється за допомогою <b>квадратних дужок</b> <code>[]</code>:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]); // "Apple"
+console.log(fruits[1]); // "Banana"
+console.log(fruits[2]); // "Cherry"</code></pre>
+    </details>
+    <h4>Зміна елементів масиву</h4>
+    <p>
+        Елементи масиву можуть бути змінені за допомогою індексів:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let fruits = ["Apple", "Banana", "Cherry"];
+fruits[1] = "Blueberry";
+console.log(fruits); // ["Apple", "Blueberry", "Cherry"]</code></pre>
+    </details>
+    <h4>Властивість length</h4>
+    <p>
+        Властивість <code>length</code> повертає кількість елементів у масиві:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits.length); // 3</code></pre>
+    </details>
+    </section>
+    <!--8.3 Методи масиву для додавання та видалення елементів-->
+    <section>
+    <h3>8.3 Методи масиву для додавання та видалення елементів</h3>
+    <h4>Метод push</h4>
+    <p>
+        Метод <code>push()</code> додає один або кілька елементів у кінець масиву та повертає нову довжину масиву:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let fruits = ['apple', 'banana'];
+fruits.push('cherry');      // ['apple', 'banana', 'cherry']
+console.log(fruits.length); // 3</code></pre>
+    </details>
+    <h4>Метод pop</h4>
+    <p>
+        Метод <code>pop()</code> видаляє останній елемент з масиву та повертає його:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let fruits = ['apple', 'banana', 'cherry'];
+let last = fruits.pop();    // 'cherry'
+console.log(fruits);        // ['apple', 'banana']</code></pre>
+    </details>
+    <h4>Метод shift</h4>
+    <p>
+        Метод <code>shift()</code> видаляє перший елемент з масиву та повертає його. Усі інші елементи зміщуються на одну позицію вліво:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let fruits = ['apple', 'banana', 'cherry'];
+let first = fruits.shift(); // 'apple'
+console.log(fruits);        // ['banana', 'cherry']</code></pre>
+    </details>
+    <h4>Метод unshift</h4>
+    <p>
+        Метод <code>unshift()</code> додає один або кілька елементів на початок масиву та повертає нову довжину масиву:
+    </p>
+    <details>
+        <summary class="exempel">Приклад:</code></summary>
+        <span class="titleForCode">JavaScript</span>
+        <pre><code>let fruits = ['banana', 'cherry'];
+fruits.unshift('apple'); // ['apple', 'banana', 'cherry']
+console.log(fruits.length); // 3</code></pre>
+    </details>
     </section>
 </body>
 </html>
