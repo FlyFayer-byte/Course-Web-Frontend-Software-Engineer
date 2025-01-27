@@ -11,23 +11,28 @@
             background: inherit;
             color: #172b53;
         }
+        .article-head__title {
+            color: #151f33;
+            font-size: 24px;
+        }
         h2 {
             color: rgb(7, 7, 24);
             padding-left: 10px;
             margin: 0;
         }
-        /*h3 {
+        h3 {
             color: darkblue;
+            text-align: center;
             padding-left: 20px;
             margin-bottom: 0;
-        }*/
-        h4 {
-            font-style: italic;
-            padding-left: 30px;
-            margin-bottom: 0;
+            font-size: 26px;
         }
+
         h5 {
-            color: blue;
+            color: rgb(50, 50, 172);
+            font-size: 18px;
+            margin: 0;
+            margin-bottom: 5px;
         }
         code {
             color: #000;
@@ -36,7 +41,7 @@
             box-shadow: 0 0 0 1px #4a678ca6 inset;
             position: relative;
             display: inline;
-            padding: 3px 5px;
+            padding: 1px 5px;
             border-radius: 3px;
             font-family: Menlo, Monaco, Consolas, 'Courier New', 'Ubuntu Mono', monospace;
 
@@ -117,7 +122,7 @@ Frontend Software Engineer</h1>
 <h2 style="color: #172b53; text-align: center;">HTML Fundamentals</h2>
 <h3>Рівень 1. Знайомство з HTML</h3>
 <section>
-    <h4>Знайомство з HTML</h4>
+    <h4 class="article-head__title">1.1 Знайомство з HTML</h4>
     <section>
         <h5>HTML-документ</h5>
         <section>
@@ -167,7 +172,7 @@ Frontend Software Engineer</h1>
         </p>
         </section>
     </section>
-    <h4>Знайомство з HTML-тегами</h4>
+    <h4 class="article-head__title">1.2 Знайомство з HTML-тегами</h4>
     <section>
         <h5>Теги</h5>
         <section>
@@ -283,7 +288,7 @@ Frontend Software Engineer</h1>
         </p>
         </section>
     </section>
-    <h4>Структура HTML-документа</h4>
+    <h4 class="article-head__title">1.3 Структура HTML-документа</h4>
     <section>
         <h5>Знайомство з HTML-документом</h5>
         <section>
@@ -362,7 +367,7 @@ Frontend Software Engineer</h1>
         </p>
         </section>
     </section>
-    <h4>Атрибути</h4>
+    <h4 class="article-head__title">1.4 Атрибути</h4>
     <section>
         <h5>Атрибути</h5>
         <section>
@@ -478,8 +483,504 @@ Frontend Software Engineer</h1>
         </section>
     </section>
 </section>
-<h3>Рівень 2 Знайомство з CSS та JavaScript</h3>
+<h3>Рівень 2. Знайомство з CSS та JavaScript</h3>
 <section>
+    <h4 class="article-head__title">2.1 Оформлення документа</h4>
+    <section>
+        <h5>Оформлення тексту</h5>
+        <b>Параграфи</b> <code>&lt;p&gt;</code>
+        <p>
+            Тег <code>&lt;p></code> використовується для створення параграфів (абзаців) тексту. Параграфи допомагають розбити текст на логічні блоки, покращуючи читабельність та сприйняття інформації.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;p>Це перший параграф тексту. Він містить деяку кількість інформації.&lt;/p>
+&lt;p>Це другий параграф тексту. Він відокремлений від першого параграфу.&lt;/p></code></pre>
+        </details>
+        <b>Жирний текст</b> <code>&lt;b&gt;</code>
+        <p>
+            Тег <code>&lt;b&gt;</code> використовується для виділення тексту (напівжирним <code>bold</code>) шрифтом. Це дозволяє підкреслити важливість певних слів або фраз.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;p>Це &lt;b><b>важливий</b>&lt;/b> текст.&lt;/p></code></pre>
+        </details>
+        <b>Курсивний текст</b> <code>&lt;i&gt;</code>
+        <p>
+            Тег <code>&lt;i&gt;</code> використовується для виділення тексту курсивом (нахиленим шрифтом, <code>italic</code>). Він часто застосовується для позначення термінів, назв книг, іноземних слів тощо.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;p>Це &lt;i><i>термін</i>&lt;/i>, який виділено курсивом.</p></code></pre>
+        </details>
+        <h5>Заголовки (h1 - h6)</h5>
+        <p>
+            <b>Заголовки в HTML</b> використовуються для структурування контенту і створення ієрархії заголовків на сторінці. Існує шість рівнів заголовків, де <code>&lt;h1></code> є найважливішим, а <code>&lt;h6></code> — найменш важливим.
+        </p>
+        <ul>
+            <li>
+                <code>&lt;h1&gt;</code> — Найважливіший і найбільший заголовок. Зазвичай
+                використовується для головного заголовку сторінки.
+            </li>
+            <li>
+                <code>&lt;h2&gt;</code> — Використовується для підзаголовків, які
+                слідують за <code>&lt;h1&gt;</code>.
+            </li>
+            <li>
+                <code>&lt;h3&gt;</code> — Рівень заголовку нижче
+                <code>&lt;h2&gt;</code>.
+            </li>
+            <li>
+                <code>&lt;h4&gt;</code> — Рівень заголовку нижче
+                <code>&lt;h3&gt;</code>.
+            </li>
+            <li>
+                <code>&lt;h5&gt;</code> — Рівень заголовку нижче
+                <code>&lt;h4&gt;</code>.
+            </li>
+            <li>
+                <code>&lt;h6&gt;</code> — Найменш важливий і найменший заголовок.
+            </li>
+        </ul>
+        <h5>Додаткові теги в <code>head</code>-документі</h5>
+        <b>- Тег</b> <code>&lt;title&gt;</code>
+        <p>
+            Тег <code>&lt;title&gt;</code> задає назву сторінки, яка відображається на вкладці браузера. Це перше, що бачить користувач при відкритті сторінки. Майже завжди присутній на всіх сторінках.
+        </p>
+        <b>- Тег</b> <code>&lt;meta charset="UTF-8"&gt;</code>
+        <p>
+            Тег <code>&lt;meta&gt;</code> всередині <code>&lt;head&gt;</code> задає кодування символів для документа. UTF-8 — це найпоширеніше кодування, яке підтримує більшість мов світу.
+        </p>        
+        <b>- Тег</b> <code>&lt;meta name="viewport" content="width=device-width,
+                    initial-scale=1.0"&gt;</code>
+        <p>
+            Цей тег також знаходиться всередині <code>&lt;head&gt;</code>. Він забезпечує правильне відображення сторінки на мобільних пристроях. Задає ширину області перегляду (viewport) рівною ширині екрана пристрою та початковий масштаб сторінки.
+        </p>
+        <b>- Тег</b> <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+        <p>
+            Тег <code>&lt;link/&gt;</code> підключає зовнішній CSS-файл для стилізації сторінки. Атрибут <code>rel="stylesheet"</code> вказує, що це таблиця стилів, а <code>href="styles.css"</code> задає шлях до файлу стилів.
+        </p>
+        <b>- Тег</b> <code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code>
+        <p>
+            Тег <code>&lt;script&gt;</code></b> підключає зовнішній JavaScript - файл для додавання інтерактивності на сторінку. Атрибут <code>src</code> вказує шлях до файлу скрипта, а <code>defer</code> говорить браузеру, що скрипт має бути виконаний після завантаження HTML - документа.
+        </p>
+    </section>
+    <h4 class="article-head__title">2.2 Знайомство з CSS</h4>
+    <section>
+        <h5>Поява CSS</h5>
+        <section>
+        <p>
+            CSS — це набір властивостей, кожна з яких має ім'я та значення. Веб-розробник задає ці властивості, а браузер відповідає за їхнє відображення. Такі властивості можна задати практично для будь-якого елемента.
+        </p>
+        <table>
+            <caption>Приклад CSS-стилів</caption>
+            <tbody>
+                <tr>
+                    <th>Ім'я CSS-властивості</th>
+                    <th>Пояснення</th>
+                    <th>Приклад</th>
+                </tr>
+                <tr>
+                    <td><code>color</code></td>
+                    <td>Колір</td>
+                    <td>color: red</td>
+                </tr>
+                <tr>
+                    <td><code>height</code></td>
+                    <td>Висота</td>
+                    <td>height: 400px</td>
+                </tr>
+                <tr>
+                    <td><code>width</code></td>
+                    <td>Ширина</td>
+                    <td>width: 100%</td>
+                </tr>
+                <tr>
+                    <td><code>background-color</code></td>
+                    <td>Колір фону</td>
+                    <td>background-color: rgb(ffccdd)</td>
+                </tr>
+                <tr>
+                    <td><code>border</code></td>
+                    <td>Рамка елемента</td>
+                    <td>border: 1 px solid black</td>
+                </tr>
+                <tr>
+                    <td><code>font-size</code></td>
+                    <td>Розмір шрифту</td>
+                    <td>font-size: 2em</td>
+                </tr>
+                <tr>
+                    <td><code>border-radius</code></td>
+                    <td>Радіус закруглених кутів</td>
+                    <td>border-radius: 4px</td>
+                </tr>
+            </tbody>
+        </table>
+        </section>
+        <h5>Стилі елементів</h5>
+        <section>
+        <p>
+            Для кожного HTML-елемента можна вказати власний CSS-стиль за допомогою атрибута <code>style</code>.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;p style="color: blue; font-size: 16px;">Це приклад вбудованого стилю.&lt;/p></code></pre>
+        </details>
+        <p>
+            Цей стиль повідомляє браузеру, що текст всередині параграфа потрібно намалювати синім кольором, а розмір шрифту має бути 16 пікселів у висоту.
+        </p>
+        <p>
+            Насправді тут два «стилі»:
+        </p>
+        <ul>
+            <li><code>color = blue</code></li>
+            <li><code>font-size = 16px</code></li>
+        </ul>
+        <p>
+            Просто вони вказані в один рядок і розділені <b>крапкою з комою</b>.
+        </p>
+        <p>
+            Також ви можете, наприклад, створити чорний прямокутник і написати у ньому текст білим кольором. Виглядати цей код буде так:
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;div style="width:100%; height:200px;color:white;background-color:black">
+    Білий текст на чорному фоні
+&lt;/div></code></pre>
+        </details>
+        </section>
+        <h5>Кольори</h5>
+        <section>
+        <p>
+            Кольори в CSS є важливою частиною стилізації вебсторінок. Вони дозволяють створювати візуально привабливі та інтуїтивно зрозумілі інтерфейси.
+        </p>
+        <img style="width: 100%;" src="media/level 2/1024.webp">
+        <b>1. Імена кольорів (Color Names)</b>
+        <p>
+            CSS підтримує більше 140 стандартних імен кольорів.
+        </p>
+        <details>
+            <summary class="exempel">Простий і зрозумілий спосіб задання кольору:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;div style="color: lightblue;">Блакитний колір тексту&lt;/div></code></pre>
+        </details>
+        <table>
+            <caption>Деякі поширені імена кольорів</caption>
+            <tbody>
+                <tr>
+                    <th>#</th>
+                    <th>CSS-ім'я кольору</th>
+                    <th>Ім'я кольору українською</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>red</td>
+                    <td>червоний</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>blue</td>
+                    <td>синій</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>green</td>
+                    <td>зелений</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>yellow</td>
+                    <td>жовтий</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>black</td>
+                    <td>чорний</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>white</td>
+                    <td>білий</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>gray</td>
+                    <td>сірий</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>silver</td>
+                    <td>срібний</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>purple</td>
+                    <td>пурпурний</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>navy</td>
+                    <td>темно-синій</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>aqua</td>
+                    <td>аква</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>lime</td>
+                    <td>лаймовий</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>fuchsia</td>
+                    <td>фуксія</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>teal</td>
+                    <td>бірюзовий</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>olive</td>
+                    <td>оливковий</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>maroon</td>
+                    <td>бордовий</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>orange</td>
+                    <td>помаранчевий</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>brown</td>
+                    <td>коричневий</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>pink</td>
+                    <td>рожевий</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>gold</td>
+                    <td>золотий</td>
+                </tr>
+            </tbody>
+        </table>
+        <b>2. Шістнадцяткові значення (Hexadecimal Values)</b>
+        <img style="width: 100%;" src="media/level 2/800.webp">
+        <p>
+            Є ще один спосіб, за допомогою якого ви можете задати будь-який колір — шістнадцяткова кодування. Вона дозволяє задати 16 мільйонів відтінків — назви для такої кількості кольорів придумати неможливо, тому використовують цифри.
+        </p>
+        <p>
+            Шістнадцяткові значення задаються з використанням символу <code>#</code>, за яким слідують шість цифр або букв, що представляють інтенсивність червоного, зеленого та синього кольорів (<span style="color: red;">RR</span><span style="color: green;">GG</span><span style="color: blue;">BB</span>).
+        </p>
+        <details>
+        <summary class="exempel">Приклад:</summary>
+        <span class="titleForCode">HTML</span>
+        <pre><code>&lt;div style="color: #ff0000; background-color: #00ff00;">Червоний на зеленому&lt;/div></code></pre>
+        </details>
+        </section>
+    </section>
+    <h4 class="article-head__title">2.3 Знайомство з селекторами</h4>
+    <section>
+        <h5>Тег &lt;style></h5>
+        <section>
+        <p>
+            Якщо у HTML-елемента занадто багато стилів, то їх можна винести в спеціальний елемент — тег <code>&lt;style></code>. Його зазвичай розміщують у тегу <code>&lt;head></code> і виглядає він ось так:
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">CSS+HTML+JavaScript</span>
+            <pre><code>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;title>Приклад CSS</title>
+    &lt;style>
+        body {
+            background-color: lightgray;
+        }
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
+    &lt;p>Це приклад використання стилів у тегу &lt;style>.&lt;/p>
+&lt;/body>
+&lt;/html></code></pre>
+        </details>
+        </section>
+        <h5>Селектори</h5>
+        <section>
+        <p>
+            Селектори — це спосіб вибору елементів HTML, до яких будуть застосовуватись CSS-властивості. Існують різні типи селекторів:
+        </p>
+        <b>Селектор тегу</b>
+        <p>
+            Застосовує стиль <b>до всіх</b> елементів певного типу. Ви просто вказуєте назву тегу і фігурні дужки після нього.
+        </p>
+        <pre><code>tagname {
+    // стилі
+}</code></pre>
+        <p>
+            <b>tagname</b> може бути будь-яким: body, image, a, p, … <b>будь-яким</b>
+        </p>    
+        <b>Селектор класу</b>
+        <p>
+            Також можна прив’язати CSS-властивості не до якогось тегу, а просто дати групі CSS-властивостей якусь назву. Така група в CSS називається класом. Застосовується такий стиль до всіх елементів із певним класом. Класи задаються атрибутом <code>class</code> у HTML.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">CSS+HTML+JavaScript</span>
+            <pre><code>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;style>
+        p.important {
+            font-weight: bold;
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
+    &lt;p class="important">Це важливий текст.&lt;/p>
+    &lt;p>Це звичайний текст.&lt;/p>
+&lt;/body>
+&lt;/html></code></pre>
+        </details>
+        <p>
+            У прикладі вище жирним буде виділений тільки текст першого параграфа, до якого застосували стиль/клас «important». У другого параграфа такого стилю немає.
+        </p>
+        <p>
+            При описі стилів у тегу <code>&lt;style></code> можна задати його 3 способами:
+        </p>
+        <ul>
+            <li>tagname { …}</li>
+            <li>tagname.classname { …}</li>
+            <li>.classname { …}</li>
+        </ul>
+        </section>
+    </section>
+    <h4 class="article-head__title">2.4 Знайомство з JavaScript</h4>
+    <section>
+        <h5>Тег <code>&lt;script></code></h5>
+        <section>
+        <p>
+            <b>JavaScript</b> — це потужна мова програмування, яка використовується для створення динамічних і інтерактивних веб-сторінок. Вона дозволяє реагувати на дії користувача, змінювати вміст веб-сторінок, взаємодіяти з серверами та багатьма іншими способами покращувати задоволення користувача від взаємодії з сайтом.
+        </p>
+        <p>
+            <b>Тег</b> <code>&lt;script></code> використовується для вбудовування JavaScript-коду в HTML-документ.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">CSS+HTML+JavaScript</span>
+            <pre><code>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Знайомство з JavaScript&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1>Ласкаво просимо на мій сайт!&lt;/h1>
+    &lt;script>
+        // Ваш JavaScript-код тут
+        alert('Привіт, світ!');
+    &lt;/script>
+&lt;/body>
+&lt;/html></code></pre>
+        </details>
+        <p>
+            У цьому прикладі використовується тег <code>&lt;script></code> для вбудовування простого JavaScript-коду, який показує спливаюче вікно з повідомленням "Привіт, світ!".
+        </p>
+        </section>
+        <h5>Підключаємо скрипт</h5>
+        <section>
+        <p>
+            Інколи краще зберігати JavaScript-код в окремому файлі. Це покращує організацію коду і його повторне використання. Для підключення JavaScript-файлу також використовується тег <code>&lt;script></code>, а за допомогою атрибута src можна задати назву JavaScript-файлу.
+        </p>  
+        <details>
+            <summary class="exempel">Підключення зовнішнього файлу JavaScript:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Знайомство з JavaScript&lt;/title>
+    &lt;script src="script.js" defer>&lt;/script>
+&lt;/head>
+&lt;body>
+    &lt;h1>Ласкаво просимо на мій сайт!&lt;/h1>
+&lt;/body>
+&lt;/html></code></pre>
+        </details> 
+        <p>
+            Цей HTML-файл просить браузер підключити до нього JavaScript-файл, який називається script.js, і може містити той самий код, що й у прикладі вище:
+        </p>
+        <details>
+            <summary class="exempel">Підключення зовнішнього файлу JavaScript:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>//script.js:
+// Ваш JavaScript-код тут
+alert('Привіт, світ!');</code></pre>
+        </details>
+        <p>
+            Атрибут <code>defer</code> використовується для того, щоб вказати браузеру виконувати скрипт після того, як увесь HTML-документ буде повністю завантажений та відображений.
+        </p>
+        </section>
+        <h5>Inline-код</h5>
+        <section>
+        <p>
+            У елементах є можливість писати css-стилі прямо у атрибуті style.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;p style="color:red">Червоний&lt;/p></code></pre>
+        </details>
+        <p>
+            Точно так само можна писати і JavaScript-код.
+        </p>
+        <p>
+            Якщо, є необхідність, щоб елемент при кліку на нього змінював колір на синій. Тоді потрібно написати такий код:
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;button type="submit" style="color: red;"onclick="this.style.color = 'blue'">Submit&lt;/button></code></pre>
+        </details>
+        <button type="submit" style="color: red;"onclick="this.style.color = 'blue'">Submit</button>
+        <p>
+            JavaScript-код, який виконається, якщо користувач натисне на елемент <code>&lt;button></code>.
+        </p>
+        <ul>
+            <li>
+                <code>onclick</code>: Атрибут HTML, що вказує функцію, яка виконується при кліку на елемент.
+            </li>
+            <li>
+                <code>this</code>: Посилання на елемент, на який був здійснений клік.
+            </li>
+            <li>
+                <code>style.color</code>: CSS-властивість, що змінює колір тексту елемента.
+            </li>
+        </ul>
+        </section>
+    </section>
 </section>
 <h3>Рівень 3 Frontend IDE</h3>
 <h3>Рівень 4 Популярні теги HTML</h3>
@@ -1968,6 +2469,11 @@ fruits.unshift('apple'); // ['apple', 'banana', 'cherry']
 console.log(fruits.length); // 3</code></pre>
     </details>
     </section>
-    
+    <hr>
+<!-------------------------------------------------------------------------------------->    
+    <h2 style="text-align: center;">HTML-теги</h2>
+ 
+</code></pre>
+    </div>
 </body>
 </html>
