@@ -363,7 +363,120 @@ Frontend Software Engineer</h1>
         </section>
     </section>
     <h4>Атрибути</h4>
-    <h4>Найкращий курс з основ програмування</h4>
+    <section>
+        <h5>Атрибути</h5>
+        <section>
+        <p>
+            Відкриваючий тег може містити особливу службову інформацію — <b>атрибути</b>. Закриваючий тег атрибути містити <span style="color: red;">не може</span>.
+        </p>
+        <p>
+            Загальний вигляд атрибутів такий:
+        </p>
+        <div class="lesson-note__container" style="text-align: center;">
+            <div class="lesson-note__content">
+&lt;tag name1="value1" name2="value2">
+            </div>
+        </div>
+        <details>
+            <summary class="exempel">Приклад тега з атрибутами — посилання:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;a href="http://javarush.com/about" target="_blank">
+    Посилання на щось цікаве
+&lt;/a></code></pre>
+        </details>
+        <p>
+            Кожен атрибут заданий у вигляді пари <code>ім'я</code> і <code>значення</code>. Атрибутів може бути <b>скільки завгодно</b>.
+        </p>
+        <table>
+            <caption>Екранування символів</caption>
+            <tbody>
+                <tr>
+                    <th>Назва символа</th>
+                    <th>Символ</th>
+                    <th>HTML-запис</th>
+                </tr>
+                <tr>
+                    <td>Подвійна лапка</td>
+                    <td>"</td>
+                    <td>&amp;quot;</td>
+                </tr>
+                <tr>
+                    <td>Амперсанд</td>
+                    <td>&amp;</td>
+                    <td>&amp;amp;</td>
+                </tr>
+                <tr>
+                    <td>Символ менше</td>
+                    <td>&lt;</td>
+                    <td>&amp;lt;</td>
+                </tr>
+                <tr>
+                    <td>Символ більше</td>
+                    <td>&gt;</td>
+                    <td>&amp;gt;</td>
+                </tr>
+                <tr>
+                    <td>Пробіл</td>
+                    <td></td>
+                    <td>&amp;nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Одинарна лапка</td>
+                    <td>'</td>
+                    <td>&amp;#39;</td>
+                </tr>
+            </tbody>
+        </table>
+        </section>
+        <h5>Зображення</h5>
+        <section>
+        <p>
+            Тег <code>&lt;img></code> використовується для вставки зображень у веб-сторінку. Це одиночний тег, тобто він не має закриваючого тега.
+        </p>
+        <p>
+            Важливі атрибути:
+        </p>
+        <ul>
+            <li>
+                <code>src</code> — вказує шлях до зображення.
+            </li>
+            <li>
+                <code>alt</code> — описує зображення, що корисно для пошукових
+                систем і для випадків, коли зображення не може бути завантажене.
+            </li>
+        </ul>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;img src="image.jpg" alt="Опис зображення"></code></pre>
+        </details>
+        </section>
+        <h5>Посилання</h5>
+        <section>
+        <p>
+            Тег <code>&lt;a></code> використовується для створення гіперпосилань.
+        </p>
+        <p>
+            Основний атрибут цього тега:
+        </p>
+        <ul>
+            <li>
+                <code>href</code> — вказує URL (адресу) сторінки або ресурсу, на
+                який веде посилання.
+            </li>
+            <li>
+                <code>target</code> — визначає, де буде відкриватися посилання
+                (наприклад, <code>_blank</code>
+                для нової вкладки).
+            </li>
+        </ul>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;a href="https://www.example.com">Перейти на Example.com&lt;/a></code></pre>
+        </details>
+        </section>
+    </section>
 </section>
 <h3>Рівень 2 Знайомство з CSS та JavaScript</h3>
 <section>
@@ -1855,5 +1968,6 @@ fruits.unshift('apple'); // ['apple', 'banana', 'cherry']
 console.log(fruits.length); // 3</code></pre>
     </details>
     </section>
+    
 </body>
 </html>
