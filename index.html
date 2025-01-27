@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Study HTML, CSS & JavaScript</title>
+    <!-- Підсвітка синтаксису JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Підсвітка синтаксису JavaScript -->
     <style>
         html {
             background-color:antiquewhite;
@@ -982,15 +987,112 @@ alert('Привіт, світ!');</code></pre>
         </section>
     </section>
 </section>
-<h3>Рівень 3 Frontend IDE</h3>
-<h3>Рівень 4 Популярні теги HTML</h3>
-<h3>Рівень 5 Таблиці</h3>
-<h3>Рівень 6 Мультимедіа в HTML, частина 1</h3>
-<h3>Рівень 7 Мультимедіа в HTML, частина 2</h3>
-<h3>Рівень 8 Форми, частина 1</h3>
-<h3>Рівень 9 Форми, частина 2</h3>
-<h3>Рівень 10 Семантичні теги HTML5</h3>
-<h3>Рівень 11 Мікророзмітка та SEO</h3>
+<h3><del>Рівень 3. Frontend IDE</del></h3>
+<h3>Рівень 3. Популярні теги HTML</h3>
+<section>
+    <h4 class="article-head__title">3.1 Списки в HTML</h4>
+    <section>
+        <h5>Види списків</h5>
+        <p>
+            Списки в HTML є важливим інструментом для організації та структурування інформації. Вони дозволяють відображати елементи з числами або з жирними крапками (маркерами). Розглянемо докладніше кожен з елементів списків в HTML: <code>&lt;ul></code>, <code>&lt;ol></code>, і <code>&lt;li></code>.
+        </p>
+        <b>Ненумеровані списки</b> <code>&lt;ul></code>
+        <p>
+            Тег <code>&lt;ul></code> використовується для створення ненумерованих (маркірованих) списків. Елементи списку відображаються з маркерами (точками, кружками, квадратами).
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;ul>
+    &lt;li>Перший елемент списку&lt;/li>
+    &lt;li>Другий елемент списку&lt;/li>
+    &lt;li>Третій елемент списку&lt;/li>
+&lt;/ul></code></pre>
+        </details>
+        <b>Нумеровані списки</b> <code>&lt;ol></code>
+        <p>
+            Тег <code>&lt;ol></code> використовується для формування нумерованих списків. Елементи списку відображаються з числами або літерами.
+        </p>
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;ol>
+    &lt;li>Перший елемент списку&lt;/li>
+    &lt;li>Другий елемент списку&lt;/li>
+    &lt;li>Третій елемент списку&lt;/li>
+&lt;/ol></code></pre>
+        </details>
+        <b>Елементи списку</b> <code>&lt;li></code>
+        <p>
+            Тег <code>&lt;li></code> використовується для позначення кожного елемента списку, незалежно від того, чи це ненумерований чи нумерований список. Він завжди повинен бути вкладеним всередину <code>&lt;ul></code> або <code>&lt;ol></code>.
+        </p>
+        <p>
+            Як легко запам'ятати ці теги:
+        </p>
+        <ul>
+            <li>
+              <b><span style="color: red;">O</span>rdered <span style="color: red;">L</span>ist</b> – впорядкований (пронумерований) список
+            </li>
+            <li>
+              <b><span style="color: red;">U</span>nordered <span style="color: red;">L</span>ist</b> – невпорядкований (непронумерований) список
+            </li>
+            <li>
+              <b><span style="color: red;">L</span>ist <span style="color: red;">I</span>tem</b> – елемент списку
+            </li>
+        </ul>
+        <b>Атрибут type</b>
+        <p>
+            Цей атрибут можна використовувати всередині <code>&lt;ul></code> і <code>&lt;ol></code> для зміни типу маркерів або нумерації. Наприклад, для <code>&lt;ol></code> можна використовувати значення "1", "A", "a", "I", "i", а для <code>&lt;ul></code> - "disc", "circle", "square".
+        </p>
+        <b>Атрибут start:</b>
+        <p>
+            Цей атрибут застосовується тільки до <code>&lt;ol></code> для вказання початкового числа нумерації.
+        </p>
+        <b>Вкладені списки</b>
+        <p>
+            Списки можуть бути вкладеними, що дозволяє створювати більш складні структури.
+        </p>
+        <div class="lesson-note lesson-note--important">
+            <div class="lesson-note__container">
+              <div class="lesson-note__head">Важливо!</div>
+                <div class="lesson-note__content">
+                    <p>
+                        CSS-властивість <code>list-style-type</code> пропонує більше типів маркування, ніж атрибут type. До того ж, атрибут type вважається застарілим.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h4 class="article-head__title">3.2 Теги для тексту і коду</h4>
+    <section>
+        <h5>Тег <code>&lt;pre></code></h5>
+        <p>
+            Теги <code>&lt;code></code> та <code>&lt;pre></code> використовуються в HTML для представлення фрагментів коду і попередньо відформатованого тексту. Вони дозволяють покращити читабельність і зберегти форматування вихідного тексту, що особливо корисно для відображення прикладів коду й інших технічних матеріалів.
+        </p>
+        <p>
+            Тег <code>&lt;pre></code> (скорочення від <b>"preformatted text"</b>) використовується для відображення тексту в HTML у тому вигляді, в якому він був написаний, зберігаючи всі пробіли, переноси рядків та табуляції. Це особливо корисно для представлення великих фрагментів коду або іншого попередньо відформатованого тексту.
+        </p>
+    </section>
+    <h4 class="article-head__title">3.3 Теги блочних елементів</h4>
+    <section>
+
+    </section>
+    <h4 class="article-head__title">Теги цитат</h4>
+    <section>
+
+    </section>
+    <h4 class="article-head__title">Спеціальні символи</h4>
+    <section>
+
+    </section>
+</section>
+<h3>Рівень 4 Таблиці</h3>
+<h3>Рівень 5 Мультимедіа в HTML, частина 1</h3>
+<h3>Рівень 6 Мультимедіа в HTML, частина 2</h3>
+<h3>Рівень 7 Форми, частина 1</h3>
+<h3>Рівень 8 Форми, частина 2</h3>
+<h3>Рівень 9 Семантичні теги HTML5</h3>
+<h3>Рівень 10 Мікророзмітка та SEO</h3>
 <h2 style="color: #172b53; text-align: center;">CSS Core</h3>
 <h3>Рівень 1 Основи CSS: Селектори</h3>
 <h3>Рівень 2 Основи CSS: Колір та псевдоелементи</h3>
