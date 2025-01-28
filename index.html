@@ -1066,16 +1066,194 @@ alert('Привіт, світ!');</code></pre>
     <h4 class="article-head__title">3.2 Теги для тексту і коду</h4>
     <section>
         <h5>Тег <code>&lt;pre></code></h5>
+        <section>
         <p>
             Теги <code>&lt;code></code> та <code>&lt;pre></code> використовуються в HTML для представлення фрагментів коду і попередньо відформатованого тексту. Вони дозволяють покращити читабельність і зберегти форматування вихідного тексту, що особливо корисно для відображення прикладів коду й інших технічних матеріалів.
         </p>
         <p>
             Тег <code>&lt;pre></code> (скорочення від <b>"preformatted text"</b>) використовується для відображення тексту в HTML у тому вигляді, в якому він був написаний, зберігаючи всі пробіли, переноси рядків та табуляції. Це особливо корисно для представлення великих фрагментів коду або іншого попередньо відформатованого тексту.
         </p>
+        <!--Синтаксис-->
+        <details>
+            <summary class="exempel">Синтаксис:</summary>
+            <pre><code>&lt;pre>
+  текст
+&lt;/pre></code></pre>
+        </details>
+        <!--Приклад з результатом-->
+        <details>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;pre>
+function sayHello() {
+    console.log("Hello, world!");
+}
+&lt;/pre></code></pre>
+        <!--Результат-->
+        <div style="border: 1px solid black; padding: 0; border-radius: 5px;">
+            <div style="padding: 5px; margin: 0;margin-bottom: 2px; border-bottom: 1px solid black; border-top-right-radius: 5px; border-top-left-radius: 5px; background-color: #f7fafe;">Результат</div>
+            <div>
+<pre style="background-color:aliceblue; color: #151f33; border: 1px solid black; border-radius: 5px; padding: 10px; margin: 2px;">
+function sayHello() {
+    console.log("Hello, world!");
+}
+</pre>
+            </div>
+        </div>
+        </details>
+        <p>
+            В цьому прикладі текст всередині тега <code>&lt;pre></code> буде відображатися із збереженням всіх пробілів та переводу рядків, як він написаний у вихідному коді.
+        </p>
+        <p>Особливості тега <code>&lt;pre></code>:</p>
+        <ul>
+            <li>Тег <code>&lt;pre></code> зберігає всі пробіли і переноси рядків в тексті</li>
+            <li>Він відображає текст у моноширинному шрифті</li>
+            <li>Часто використовується разом з тегом <code>&lt;code></code> для виділення коду</li>
+        </ul>
+        </section>
+        <h5>Тег <code>&lt;code></code></h5>
+        <section>
+            <p>
+                Тег <code>&lt;code></code> використовується для позначення фрагментів коду або інших машинно-читабельних даних всередині тексту. Він зазвичай застосовується для виділення рядків коду, змінних, функцій та інших елементів програмування.
+            </p>
+            <div class="lesson-note__container" style="text-align: center;">
+                <div class="lesson-note__content">
+                    &lt;code>код&lt;/code>
+                </div>
+            </div>
+                <!--Приклад з результатом-->
+        <detailsopen>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;p>Щоб вивести повідомлення в консоль, використовуйте функцію &lt;code>console.log()&lt;/code>.&lt;/p></code></pre>
+        <!--Результат-->
+        <div style="border: 1px solid black; padding: 0; border-radius: 5px;">
+            <div style="padding: 5px; margin: 0;margin-bottom: 2px; border-bottom: 1px solid black; border-top-right-radius: 5px; border-top-left-radius: 5px; background-color: #f7fafe;">Результат</div>
+            <div>
+<div style="background-color:aliceblue; color: #151f33; border: 1px solid black; border-radius: 5px; padding: 10px; margin: 2px;">
+    <p>Щоб вивести повідомлення в консоль, використовуйте функцію <span style="font-family: Consolas;">console.log()</span>.</p>
+</div>
+            </div>
+        </div>
+        </details>
+        <p>
+            В цьому прикладі текст "<code>console.log()</code>" буде виділений як код.
+        </p>
+        <b>Характеристики тега <code>&lt;code></code>:</b>
+        <ul>
+            <li>
+                Тег <code>&lt;code></code> відображає текст в моноширинному шрифті (зазвичай Courier або Consolas)
+            </li>
+            <li>
+                Він не зберігає форматування, таке як переноси рядків або відступи
+            </li>
+            <li>
+                Тег <code>&lt;code></code> часто використовується всередині інших тегів, таких як <code>&lt;p></code>, <code>&lt;li></code> або <code>&lt;pre></code>
+            </li>
+        </ul>
+        </section>
+        <h5>Використання <code>&lt;pre></code> і </h5>
+        <section>
+            <p>
+                Для виділення та форматування великих блоків коду часто використовуються теги <code>&lt;pre></code> та <code>&lt;code></code> разом. Це дозволяє зберегти форматування та виділити текст як код.
+            </p>
+            <!--Приклад з результатом-->
+        <detailsopen>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;pre>
+    &lt;code>
+        function helloWorld() {
+            console.log('Hello, world!');
+        }
+    &lt;/code>
+&lt;/pre></code></pre>
+        <!--Результат-->
+        <div style="border: 1px solid black; padding: 0; border-radius: 5px;">
+            <div style="padding: 5px; margin: 0;margin-bottom: 2px; border-bottom: 1px solid black; border-top-right-radius: 5px; border-top-left-radius: 5px; background-color: #f7fafe;">Результат</div>
+            <div>
+<div style="background-color:aliceblue; color: #151f33; border: 1px solid black; border-radius: 5px; padding: 10px; margin: 2px;">
+<pre>
+    <code>
+        function helloWorld() {
+            console.log('Hello, world!');
+        }
+    </code>
+</pre>
+</div>
+            </div>
+        </div>
+        </details>
+        <p>
+            В результаті браузер відобразить текст з усіма збереженими форматуваннями та виділенням коду.
+        </p>
+        </section>
+        <h5>Підсвітка синтаксису</h5>
+        <section>
+            <p>
+                Для підсвітки синтаксису можна використовувати зовнішні бібліотеки, такі як <b>Prism.js</b> або <b>Highlight.js</b>, які автоматично розпізнають і підсвічують синтаксис коду на веб-сторінці.
+            </p>
+            <!--Приклад з результатом-->
+        <detailsopen>
+            <summary class="exempel">Приклад:</summary>
+            <span class="titleForCode">HTML</span>
+            <pre><code>&lt;html>
+    &lt;head>
+        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+        &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js">&lt;/script>
+        &lt;script>hljs.initHighlightingOnLoad();&lt;/script>
+    &lt;/head>
+    &lt;body>
+        &lt;pre>
+            &lt;code>
+                function helloWorld() {
+                    console.log('Hello, world!');
+                }
+            &lt;/code>
+        &lt;/pre>
+    &lt;/body>
+&lt;/html></code></pre>
+        <!--Результат-->
+        <div style="border: 1px solid black; padding: 0; border-radius: 5px;">
+            <div style="padding: 5px; margin: 0;margin-bottom: 2px; border-bottom: 1px solid black; border-top-right-radius: 5px; border-top-left-radius: 5px; background-color: #f7fafe;">Результат</div>
+            <div>
+<div style="background-color:aliceblue; color: #151f33; border: 1px solid black; border-radius: 5px; padding: 10px; margin: 2px;">
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+        </head>
+        <body>
+            <pre>
+<code>
+function helloWorld() {
+    console.log('Hello, world!');
+}
+</code>
+            </pre>
+        </body>
+    </html>
+            </div>
+        </div>
+        </div>
+        </details>
+        <p>
+            У результаті блок коду буде автоматично підсвічений відповідно до синтаксису JavaScript.
+        </p>
+        <p>
+            Теги <code>&lt;code></code> і <code>&lt;pre></code> в HTML — це потужні інструменти для відображення і форматування коду та інших текстів зі збереженням вихідного форматування.
+        </p>
+        </section>
     </section>
     <h4 class="article-head__title">3.3 Теги блочних елементів</h4>
     <section>
-
+        <h5>Елемент <code>&lt;p></code></h5>
+        <section>
+            <p>
+                Блочні елементи в HTML використовуються для створення структури та організації вмісту веб-сторінки. Вони допомагають розбивати контент на логічні блоки та сегменти. Ці елементи починають новий рядок і займають всю доступну ширину. Розглянемо докладніше три часто використовуваних теги: <code>&lt;p></code>, <code>&lt;div></code>, і <code>&lt;span></code>.
+            </p>
+        </section>
     </section>
     <h4 class="article-head__title">Теги цитат</h4>
     <section>
