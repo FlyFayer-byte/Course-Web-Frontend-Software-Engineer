@@ -1,2 +1,2 @@
 # Курс Web
-# Frontend SELF UA
+# "Frontend SELF UA"
