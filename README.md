@@ -1,1 +1,2 @@
-# Study-HTML-CSS-JavaScript
+Курс Web
+Frontend SELF UA
