@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Курс Web "Frontend SELF UA"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <style>
       h1 {
         text-align: center;
@@ -20,10 +23,6 @@
         margin-top:30px;
         margin-bottom:40px;
         justify-self: center;
-      }
-      code {
-        font-weight: 900;
-        font-size: 1.2em;
       }
     </style>
   </head>
@@ -621,6 +620,116 @@ alert('Привіт, світ!');</code></pre>
     </section>
     <h2>Популярні теги HTML</h2>
     <section>
+      <h3>Списки в HTML</h3>
+      <section>
+        <!--Види списків-->
+        <h4>Види списків</h4>
+        <p>
+          Списки в HTML є важливим інструментом для організації та структурування інформації. Вони дозволяють відображати елементи з числами або з жирними крапками (маркерами). Розглянемо докладніше кожен з елементів списків в HTML: <code>&lt;ul></code>, <code>&lt;ol></code>, і <code>&lt;li></code>.
+        </p>
+        <b>Ненумеровані списки <code>&lt;ul></code></b>
+        <p>
+          Тег <code>&lt;ul></code> використовується для створення ненумерованих (маркірованих) списків. Елементи списку відображаються з маркерами (точками, кружками, квадратами).
+        </p>
+        <b>Нумеровані списки <code>&lt;ol></code></b>
+        <p>
+          Тег <code>&lt;ol></code> використовується для формування нумерованих списків. Елементи списку відображаються з числами або літерами.
+        </p>
+        <!--Елементи списку <li>-->
+        <h4>Елементи списку <code>&lt;li></code></h4>
+        <p>
+          Тег <code>&lt;li></code> використовується для позначення кожного елемента списку, незалежно від того, чи це ненумерований чи нумерований список. Він завжди повинен бути вкладеним всередину <code>&lt;ul></code> або <code>&lt;ol></code>.
+        </p>
+        <b>Як легко запам'ятати ці теги:</b>
+        <ul>
+          <li><b><span style="color: red;">O</span>rdered <span style="color: red;">L</span></b> – впорядкований (пронумерований) список</li>
+          <li><b><span style="color: red;">U</span>nordered <span style="color: red;">L</span>ist</b> – невпорядкований (непронумерований) список</li>
+          <li><b><span style="color: red;">L</span>ist <span style="color: red;">I</span>tem</b> – елемент списку</li>
+        </ul>
+        <p>Атрибут type</p>
+        <p>
+          Цей атрибут можна використовувати всередині <code>&lt;ul></code> і <code>&lt;ol></code> для зміни типу маркерів або нумерації. Наприклад, для <code>&lt;ol></code> можна використовувати значення "1", "A", "a", "I", "i", а для <code>&lt;ul></code> - "disc", "circle", "square".
+        </p>
+        <b>Атрибут start:</b>
+        <p>
+          Цей атрибут застосовується тільки до <code>&lt;ol></code> для вказання початкового числа нумерації.
+        </p>
+        <b>Вкладені списки</b>
+        <p>
+          Списки можуть бути вкладеними, що дозволяє створювати більш складні структури.
+        </p>
+        <b style="color: red;">Важливо!</b>
+        <p>
+          CSS-властивість <code>list-style-type</code> пропонує більше типів маркування, ніж атрибут <code>type</code>. До того ж, атрибут <code>type</code> вважається застарілим.
+        </p>
+      </section>
+      <h3>Теги для тексту і коду</h3>
+      <section>
+      <!--Тег <pre>-->
+      <h4>Тег <code>&lt;pre></code></h4>
+      <p>
+        Тег <code>&lt;pre></code> (скорочення від <b>"preformatted text"</b>) використовується для відображення тексту в HTML у тому вигляді, в якому він був написаний, зберігаючи всі пробіли, переноси рядків та табуляції. Це особливо корисно для представлення великих фрагментів коду або іншого попередньо відформатованого тексту.
+      </p>
+      <b>Особливості тега <code>&lt;pre></code>:</b>
+      <ul>
+        <li>
+          Тег <code>&lt;pre&gt;</code> зберігає всі пробіли і переноси рядків в тексті
+        </li>
+        <li>
+          Він відображає текст у моноширинному шрифті
+        </li>
+        <li>
+          Часто використовується разом з тегом <code>&lt;code&gt;</code> для виділення коду
+        </li>
+      </ul>
+      <!--Тег <code>-->
+      <h4>Тег <code>&lt;code></code></h4>
+      <p>
+        Тег <code>&lt;code></code> використовується для позначення фрагментів коду або інших машинно-читабельних даних всередині тексту. Він зазвичай застосовується для виділення рядків коду, змінних, функцій та інших елементів програмування.
+      </p>
+      <b>Характеристики тега <code>&lt;code></code>:</b>
+      <ul>
+        <li>
+          Тег <code>&lt;code&gt;</code> відображає текст в моноширинному шрифті (зазвичай Courier або Consolas)
+        </li>
+        <li>
+          Він не зберігає форматування, таке як переноси рядків або відступи
+        </li>
+        <li>
+          Тег <code>&lt;code&gt;</code> часто використовується всередині інших тегів, таких як <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code> або <code>&lt;pre&gt;</code>
+        </li>
+      </ul>
+      <!--Використання <pre> і <code>-->
+      <h4>Використання <code>&lt;pre></code> і <code>&lt;code></code></h4>
+      <p>
+        Для виділення та форматування великих блоків коду часто використовуються теги <code>&lt;pre&gt;</code> та <code>&lt;code&gt;</code> разом. Це дозволяє зберегти форматування та виділити текст як код.
+      </p>
+      <!--Підсвітка синтаксису-->
+      <h4>Підсвітка синтаксису</h4>
+      <p>
+        Для підсвітки синтаксису можна використовувати зовнішні бібліотеки, такі як <b>Prism.js</b> або <b>Highlight.js</b>, які автоматично розпізнають і підсвічують синтаксис коду на веб-сторінці.
+      </p>
+      <b>Приклад використання Highlight.js:</b>
+      <pre><code>&lt;html>
+&lt;head>
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js">&lt;/script>
+  &lt;script>hljs.initHighlightingOnLoad();&lt;/script>
+&lt;/head>
+&lt;body>
+  &lt;pre>
+    &lt;code>
+function helloWorld() {
+  console.log('Hello, world!');
+}
+    &lt;/code>
+  &lt;/pre>
+&lt;body>
+&lt;/html></code></pre>
+        <p>
+          У результаті блок коду буде автоматично підсвічений відповідно до синтаксису JavaScript.
+        </p>
+      </section>
 
     </section>
   </body>
