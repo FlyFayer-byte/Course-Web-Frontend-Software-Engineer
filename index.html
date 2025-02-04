@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>Курс Web "Frontend SELF UA"</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>hljs.initHighlightingOnLoad();</script>-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet">
     <style>
       h1 {
         text-align: center;
@@ -1781,7 +1782,554 @@ video.addEventListener('timeupdate', function() {
     <!--Мультимедіа в HTML, частина 2-->
     <h2>Мультимедіа в HTML, частина 2</h2>
     <section>
+      <h3>Формати мультимедіа</h3>
+      <section>
+        <!--Формати аудіо-->
+        <h4>Формати аудіо</h4>
+        <p>
+          Під час розробки вебсайтів та додатків важливо враховувати, які формати мультимедіа підтримуються різними браузерами. Розуміння цієї інформації дозволяє розробникам забезпечувати кросбраузерну сумісність і покращити досвід користувача.
+        </p>
+        <b>Формати аудіо</b>
+        <p>
+          Існує декілька поширених форматів аудіо, кожен з яких має свої переваги та обмеження. Найбільш часто використовувані формати включають MP3, OGG, WAV та AAC.
+        </p>
+        <b>1. Формат MP3 (MPEG-1 Audio Layer III)</b>
+        <p>
+          <b>MP3</b> — це один із найпопулярніших форматів аудіо. Він використовує стиснення з втратами для зменшення розміру файлу,
+          зберігаючи прийнятну якість звуку. MP3 підтримується більшістю браузерів та пристроїв.
+        </p>
+        <p><b>Переваги:</b></p>
+        <ul>
+          <li>Широка підтримка браузерів</li>
+          <li>Хороша якість звуку при невеликому розмірі файлу</li>
+        </ul>
+        <b>Підтримка браузерів:</b>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Safari</li>
+          <li>Microsoft Edge</li>
+          <li>Opera</li>
+          <li>Internet Explorer 9 і вище</li>
+        </ul>
+        <p><b>2. Формат OGG (Ogg Vorbis)</b></p>
+        <p>
+          <b>OGG</b> — це відкритий формат аудіо зі стисненням з втратами, який забезпечує хорошу якість звуку та часто використовується
+          як альтернатива MP3. OGG підтримується більшістю сучасних браузерів.
+        </p>
+        <p><b>Переваги:</b></p>
+        <ul>
+          <li>Відкритий формат</li>
+          <li>Хороша якість звуку</li>
+        </ul>
+        <p><b>Підтримка браузерів:</b></p>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Opera</li>
+          <li>Microsoft Edge</li>
+          <li>Safari (обмежена підтримка)</li>
+        </ul>
+        <p><b>3. Формат WAV (Waveform Audio File Format)</b></p>
+        <p>
+          <b>WAV</b> — це формат аудіо без стиснення, який забезпечує високу якість звуку. Проте файли WAV мають більший розмір
+          у порівнянні з MP3 та OGG, що робить їх менш бажаними для використання в вебі.
+        </p>
+        <p><b>Переваги:</b></p>
+        <ul>
+          <li>Висока якість звуку</li>
+          <li>Без стиснення (немає втрат даних) </li>
+        </ul>
+        <p><b>Недоліки:</b></p>
+        <ul>
+          <li>Великий розмір файлу</li>
+        </ul>
+        <p><b>Підтримка браузерів:</b></p>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Safari</li>
+          <li>Microsoft Edge</li>
+          <li>Opera</li>
+        </ul>
+        <p><b>4. Формат AAC (Advanced Audio Coding)</b></p>
+        <p>
+          <b>AAC</b> — це формат аудіо зі стисненням з втратами, який часто використовується для потокового мовлення та завантажень, таких як
+          музика з iTunes. AAC забезпечує кращу якість звуку порівняно з MP3 при однаковому бітрейті.
+        </p>
+        <p><b>Переваги:</b></p>
+        <ul>
+          <li>Висока якість звуку при меншому розмірі файлу порівняно з MP3</li>
+          <li>Підтримка потокового мовлення</li>
+        </ul>
+        <p><b>Підтримка браузерів:</b></p>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Safari</li>
+          <li>Microsoft Edge</li>
+         <li>Opera</li>
+          <li>Internet Explorer 9 і вище</li>
+        </ul>
+        <!--Формати відео-->
+        <h4>Формати відео</h4>
+        <p>
+          Існує декілька поширених форматів відео, які використовуються для вебконтенту. Найбільш часто
+          використовувані формати включають MP4, WebM та OGG.
+        </p>
+        <p><b>1. Формат MP4 (MPEG-4 Part 14)</b></p>
+        <p>
+          <b>MP4</b> — це один із найпопулярніших форматів відео. Він підтримується більшістю браузерів та пристроїв, що робить його
+          чудовим вибором для вебвідео. MP4 використовує стиснення з втратами та забезпечує добру якість відео при невеликому розмірі файлу.
+        </p>
+        <p><b>Переваги:</b></p>
+        <ul>
+          <li>Широка підтримка браузерів</li>
+          <li>Хороша якість відео при невеликому розмірі файлу</li>
+        </ul>
+        <p><b>Підтримка браузерів:</b></p>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Safari</li>
+          <li>Microsoft Edge</li>
+          <li>Opera</li>
+          <li>Internet Explorer 9 і вище</li>
+        </ul>
+        <p><b>2. Формат WebM</b></p>
+        <p>
+          <b>WebM</b> — це відкритий формат стиснення відео, розроблений для використання в інтернеті. WebM забезпечує хорошу якість
+          відео та підтримується більшістю сучасних браузерів.
+        </p>
+        <p><b>Переваги:</b></p>
+        <ul>
+          <li>Відкритий формат</li>
+          <li>Хороша якість відео</li>
+        </ul>
+        <p><b>Підтримка браузерів:</b></p>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Opera</li>
+          <li>Microsoft Edge</li>
+          <li>Safari (обмежена підтримка)</li>
+        </ul>
+        <p><b>3. Формат OGG (Ogg Theora)</b></p>
+        <p>
+          <b>OGG</b> — це відкритий формат відео, який підтримується багатьма браузерами. Цей формат забезпечує хорошу якість
+          відео і часто використовується як альтернатива MP4 та WebM.
+        </p>
+        <p><b>Переваги:</b></p>
+        <ul>
+          <li>Відкритий формат</li>
+          <li>Хороша якість відео</li>
+        </ul>
+        <p><b>Підтримка браузерів:</b></p>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Opera</li>
+          <li>Microsoft Edge</li>
+          <li>Safari (обмежена підтримка)</li>
+        </ul>
+        <!--Підтримка мультимедіа браузерами-->
+        <h4>Підтримка мультимедіа браузерами</h4>
+        <p>Таблиця підтримки мультимедіа браузерами</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Формат</th>
+            <th>Chrome</th>
+            <th>Firefox</th>
+            <th>Safari</th>
+            <th>Edge</th>
+            <th>Opera</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>MP3</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Ogg Vorbis</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>Частково</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>WAV</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>AAC</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>MP4</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>WebM</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>Частково</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Ogg Theora</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>Частково</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>AVI</td>
+            <td>✗</td>
+            <td>✗</td>
+            <td>✗</td>
+            <td>✗</td>
+            <td>✗</td>
+          </tr>
+          </tbody>
+        </table>
+        <p><b>Рекомендації щодо вибору форматів</b></p>
+        <p>Під час вибору форматів мультимедіа для вебсторінок важливо враховувати декілька факторів:</p>
+        <ol>
+          <li><b>Сумісність</b>: обирайте формати, які підтримуються більшістю сучасних браузерів і пристроїв. Це забезпечує кращий досвід для користувачів.</li>
+          <li><b>Якість і стиснення</b>: баланс між якістю і розміром файлу важливий для продуктивності. Формати, такі як MP4 і WebM, забезпечують хорошу якість при ефективному стисненні.</li>
+          <li><b>Ліцензування</b>: зверніть увагу на ліцензійні обмеження деяких форматів, таких як MP3 і MP4. Якщо важливо використовувати відкриті стандарти, обирайте формати, такі як Ogg Vorbis і WebM. </li>
+          <li><b>Потокове передавання</b>: для потокового мовлення мультимедіа важливо враховувати продуктивність і якість. Формати, такі як MP4 і WebM, добре підходять для потокового відео завдяки ефективному стисненню і якості.</li>
+        </ol>
+      </section>
+      <h3>Використання &lt;figure> та &lt;figcaption></h3>
+      <section>
+        <p>
+          Використання тегів <code>&lt;figure&gt;</code> і <code>&lt;figcaption&gt;</code> в HTML надає семантичний спосіб
+          додавання зображень та інших мультимедійних елементів з підписами до них. Ці теги допомагають покращити структуру контенту,
+          зробити його більш доступним і зрозумілим як для користувачів, так і для пошукових систем.
+        </p>
+        <!--Елемент <figure>-->
+        <h4>Елемент <code>&lt;figure></code></h4>
+        <p>
+          Елемент <code>&lt;figure&gt;</code> використовується для позначення самостійного вмісту, що ілюструє або
+          пояснює решту частини документа. Він може містити зображення, діаграму, відео, аудіо, таблицю або навіть блок коду.
+          Зазвичай елемент <code>&lt;figure&gt;</code> використовується разом з елементом <code>&lt;figcaption&gt;</code>,
+          який додає підпис до вмісту <code>&lt;figure&gt;</code>.
+        </p>
+        <p><b>Синтаксис</b></p>
+        <div class="code-heading">HTML</div>
+        <pre><code>&lt;figure>
+  &lt;!-- Тут може бути будь-який мультимедійний елемент, наприклад, зображення -->
+&lt;/figure></code></pre>
+        <p>Приклади використання:</p>
+        <p><b>Приклад 1: Зображення з підписом</b></p>
+        <div class="code-heading">HTML</div>
+        <pre><code>&lt;figure>
+  &lt;img src="example.jpg" alt="Приклад зображення">
+  &lt;figcaption>Підпис до зображення, що пояснює його зміст</figcaption>
+&lt;/figure></code></pre>
+        <p>Приклад 2: Таблиця з підписом</p>
+        <div class="code-heading">HTML</div>
+        <pre><code>&lt;figure>
+  &lt;table>
+    &lt;tr>
+      &lt;th>Заголовок 1&lt;/th>
+      &lt;th>Заголовок 2&lt;/th>
+    &lt;/tr>
+    &lt;tr>
+      &lt;td>Дані 1&lt;/td>
+      &lt;td>Дані 2&lt;/td>
+    &lt;/tr>
+  &lt;/table>
+  &lt;figcaption>Підпис до таблиці&lt;/figcaption>
+&lt;/figure></code></pre>
+        <!--Елемент <figcaption>-->
+        <h4>Елемент <code>&lt;figcaption></code></h4>
+        <p>
+          Елемент <code>&lt;figcaption&gt;</code> використовується для додавання підпису до вмісту елемента
+          <code>&lt;figure&gt;</code>. Він може бути розташований як перед вмістом <code>&lt;figure&gt;</code>, так і після нього,
+          залежно від уподобань розробника або вимог дизайну.
+        </p>
+        <p><b>Синтаксис</b></p>
+        <div class="code-heading">HTML</div>
+        <pre><code>&lt;figure>
+  &lt;!-- Вміст елемента figure -->
+  &lt;figcaption>Підпис до вмісту&lt;/figcaption>
+&lt;/figure></code></pre>
+        <!--Доступність і SEO-->
+        <h4>Доступність і SEO</h4>
+        <p>
+          Використання елементів <code>&lt;figure&gt;</code> і <code>&lt;figcaption&gt;</code> покращує доступність та SEO
+          вашого сайту. Програми для читання екрану, які використовують люди з обмеженими можливостями, краще розуміють контекст
+          зображення завдяки семантичному тегу <code>&lt;figcaption&gt;</code>. Пошукові системи також враховують структуру
+          HTML-документа, що допомагає покращити індексування і рейтинг сторінки.
+        </p>
+        <!--Стиль і оформлення за допомогою CSS-->
+        <h4>Стиль і оформлення за допомогою CSS</h4>
+        <p>
+          Стилізація елементів <code>&lt;figure&gt;</code> і <code>&lt;figcaption&gt;</code> за допомогою CSS дозволяє створити
+          привабливе візуальне оформлення і покращити сприйняття контенту.
+        </p>
+        <p>
+          Використання елементів <code>&lt;figure&gt;</code> і <code>&lt;figcaption&gt;</code> надає семантичний
+          і структурований спосіб додавання мультимедійного контенту з підписами на веб-сторінки. Ці елементи не тільки
+          покращують доступність і SEO, але й роблять контент більш зрозумілим і структурованим для користувачів.
+        </p>
+      </section>
+      <h3>Елементи &lt;source> та &lt;track></h3>
+      <section>
 
+      </section>
+      <h3>Блокова модель HTML</h3>
+      <section>
+
+      </section>
+      <h3>Псевдокласи та псевдоелементи</h3>
+      <section>
+
+      </section>
     </section>
+
+
+    <style>
+      :root {
+          --primary: #6C63FF;
+          --secondary: #FF6584;
+          --bg-light: #f8f9fa;
+          --text-light: #2d3436;
+          --bg-dark: #1a1a1a;
+          --text-dark: #ffffff;
+          --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Основні стилі залишаються попередніми... */
+
+      /* Нові стилі */
+      .search-container {
+          position: relative;
+          max-width: 500px;
+          margin: 2rem auto;
+      }
+
+      #searchInput {
+          width: 100%;
+          padding: 1rem;
+          border-radius: 8px;
+          border: 2px solid var(--primary);
+          background: rgba(108, 99, 255, 0.05);
+          color: inherit;
+      }
+
+      .code-editor {
+          background: var(--bg-dark);
+          border-radius: 12px;
+          margin: 2rem 0;
+          overflow: hidden;
+      }
+
+      .editor-header {
+          padding: 1rem;
+          background: rgba(0, 0, 0, 0.1);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .editor-content {
+          position: relative;
+          padding: 1rem;
+      }
+
+      .run-button {
+          background: var(--primary);
+          color: white;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: var(--transition);
+      }
+
+      .run-button:hover {
+          opacity: 0.9;
+      }
+
+      .preview-frame {
+          width: 100%;
+          height: 300px;
+          border: none;
+          background: white;
+          margin-top: 1rem;
+          border-radius: 8px;
+      }
+
+      .loader {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 50px;
+          height: 50px;
+          border: 4px solid var(--primary);
+          border-radius: 50%;
+          border-top-color: transparent;
+          animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+          to { transform: rotate(360deg); }
+      }
+
+      .skeleton-loader {
+          background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite;
+          border-radius: 8px;
+          min-height: 100px;
+          margin: 1rem 0;
+      }
+
+      @keyframes shimmer {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+      }
+
+      .highlight {
+          background: yellow;
+          color: black;
+      }
+  </style>
+
+
+
+        <!-- Навігація залишається попередньою... -->
+
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Пошук по контенту...">
+      </div>
+  
+      <section class="hero">
+          <h1>Сучасний довідник для розробників</h1>
+          <p>Досліджуйте, створюйте та навчайтеся з інтерактивними прикладами</p>
+      </section>
+  
+      <div class="code-editor">
+          <div class="editor-header">
+              <span>Приклад коду (HTML/CSS/JS)</span>
+              <button class="run-button">Запустити ▶</button>
+          </div>
+          <pre class="editor-content"><code class="language-html" contenteditable="true">
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+      &lt;style&gt;
+          .box {
+              width: 100px;
+              height: 100px;
+              background: #6C63FF;
+              transition: transform 0.3s;
+          }
+          .box:hover {
+              transform: rotate(45deg);
+          }
+      &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div class="box"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+          </code></pre>
+          <iframe class="preview-frame"></iframe>
+      </div>
+  
+      <div class="loader"></div>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+      <script>
+          // Пошук по контенту
+          const searchInput = document.getElementById('searchInput');
+          const originalContent = document.body.innerHTML;
+  
+          function highlightText(text) {
+              const regex = new RegExp(`(${text})`, 'gi');
+              document.body.innerHTML = originalContent.replace(regex, '<span class="highlight">$1</span>');
+          }
+  
+          function debounce(func, timeout = 300) {
+              let timer;
+              return (...args) => {
+                  clearTimeout(timer);
+                  timer = setTimeout(() => func.apply(this, args), timeout);
+              };
+          }
+  
+          searchInput.addEventListener('input', debounce((e) => {
+              showLoader();
+              setTimeout(() => {
+                  if (e.target.value.length > 0) {
+                      highlightText(e.target.value);
+                  } else {
+                      document.body.innerHTML = originalContent;
+                  }
+                  hideLoader();
+              }, 500);
+          }));
+  
+          // Інтерактивний редактор коду
+          document.querySelector('.run-button').addEventListener('click', () => {
+              showLoader();
+              const code = document.querySelector('.language-html').textContent;
+              const preview = document.querySelector('.preview-frame');
+              preview.srcdoc = code;
+              setTimeout(hideLoader, 1000);
+          });
+  
+          // Анімації завантаження
+          function showLoader() {
+              document.querySelector('.loader').style.display = 'block';
+          }
+  
+          function hideLoader() {
+              document.querySelector('.loader').style.display = 'none';
+          }
+  
+          // Імітація завантаження контенту
+          document.querySelectorAll('.nav-link').forEach(link => {
+              link.addEventListener('click', (e) => {
+                  e.preventDefault();
+                  showLoader();
+                  document.querySelector('.nav-menu').classList.remove('active');
+                  
+                  setTimeout(() => {
+                      // Тут можна додати реальне завантаження контенту
+                      hideLoader();
+                  }, 1000);
+              });
+          });
+  
+          // Ініціалізація підсвітки синтаксису
+          Prism.highlightAll();
+      </script>
   </body>
 </html>
