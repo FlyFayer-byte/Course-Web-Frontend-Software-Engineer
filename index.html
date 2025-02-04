@@ -2331,5 +2331,346 @@ video.addEventListener('timeupdate', function() {
           // Ініціалізація підсвітки синтаксису
           Prism.highlightAll();
       </script>
+
+      <h1>HTML Теги та їх атрибути</h1>
+      <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+    </style>
+
+
+
+<h2>Загальні атрибути</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>class</code></td>
+            <td>Будь-який рядок (наприклад, <code>"my-class"</code>)</td>
+            <td>Вказує один або кілька класів для елементу (використовується для CSS).</td>
+        </tr>
+        <tr>
+            <td><code>id</code></td>
+            <td>Унікальний ідентифікатор (наприклад, <code>"header"</code>)</td>
+            <td>Вказує унікальний ідентифікатор для елементу.</td>
+        </tr>
+        <tr>
+            <td><code>style</code></td>
+            <td>CSS-правила (наприклад, <code>"color: red; font-size: 14px;"</code>)</td>
+            <td>Вказує вбудовані стилі для елементу.</td>
+        </tr>
+        <tr>
+            <td><code>title</code></td>
+            <td>Будь-який текст (наприклад, <code>"Це підказка"</code>)</td>
+            <td>Додає підказку, яка з'являється при наведенні на елемент.</td>
+        </tr>
+        <tr>
+            <td><code>lang</code></td>
+            <td>Код мови (наприклад, <code>"uk"</code>, <code>"en"</code>, <code>"fr"</code>)</td>
+            <td>Вказує мову контенту елементу.</td>
+        </tr>
+        <tr>
+            <td><code>dir</code></td>
+            <td><code>"ltr"</code> (зліва направо), <code>"rtl"</code> (справа наліво)</td>
+            <td>Вказує напрямок тексту.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Атрибути для тегу <code>&lt;a&gt;</code> (посилання)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>href</code></td>
+            <td>URL-адреса (наприклад, <code>"https://example.com"</code>)</td>
+            <td>Вказує адресу, на яку веде посилання.</td>
+        </tr>
+        <tr>
+            <td><code>target</code></td>
+            <td><code>"_self"</code>, <code>"_blank"</code>, <code>"_parent"</code>, <code>"_top"</code></td>
+            <td>Вказує, де відкрити посилання (<code>_blank</code> — у новій вкладці).</td>
+        </tr>
+        <tr>
+            <td><code>rel</code></td>
+            <td><code>"nofollow"</code>, <code>"noopener"</code>, <code>"noreferrer"</code>, <code>"stylesheet"</code>, <code>"icon"</code></td>
+            <td>Вказує відношення між поточним документом і посиланням.</td>
+        </tr>
+        <tr>
+            <td><code>download</code></td>
+            <td>Ім'я файлу (наприклад, <code>"file.pdf"</code>) або без значення</td>
+            <td>Вказує, що ресурс має бути завантажений, а не відкритий.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Атрибути для тегу <code>&lt;img&gt;</code> (зображення)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>src</code></td>
+            <td>URL-адреса зображення (наприклад, <code>"image.jpg"</code>)</td>
+            <td>Вказує шлях до зображення.</td>
+        </tr>
+        <tr>
+            <td><code>alt</code></td>
+            <td>Альтернативний текст (наприклад, <code>"Опис зображення"</code>)</td>
+            <td>Текст, який відображається, якщо зображення не завантажено.</td>
+        </tr>
+        <tr>
+            <td><code>width</code></td>
+            <td>Число (наприклад, <code>"300"</code>)</td>
+            <td>Ширина зображення в пікселях.</td>
+        </tr>
+        <tr>
+            <td><code>height</code></td>
+            <td>Число (наприклад, <code>"200"</code>)</td>
+            <td>Висота зображення в пікселях.</td>
+        </tr>
+        <tr>
+            <td><code>loading</code></td>
+            <td><code>"eager"</code>, <code>"lazy"</code></td>
+            <td>Вказує, коли завантажувати зображення (<code>lazy</code> — відкладає завантаження).</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Атрибути для тегу <code>&lt;input&gt;</code> (поле введення)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>type</code></td>
+            <td><code>"text"</code>, <code>"password"</code>, <code>"email"</code>, <code>"number"</code>, <code>"date"</code>, <code>"checkbox"</code>, <code>"radio"</code></td>
+            <td>Вказує тип поля введення.</td>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td>Будь-який рядок (наприклад, <code>"username"</code>)</td>
+            <td>Ім'я поля, яке використовується при відправці форми.</td>
+        </tr>
+        <tr>
+            <td><code>value</code></td>
+            <td>Будь-який текст або число</td>
+            <td>Значення поля за замовчуванням.</td>
+        </tr>
+        <tr>
+            <td><code>placeholder</code></td>
+            <td>Підказка (наприклад, <code>"Введіть ім'я"</code>)</td>
+            <td>Текст, який відображається в полі, поки воно порожнє.</td>
+        </tr>
+        <tr>
+            <td><code>required</code></td>
+            <td>Без значення або <code>"required"</code></td>
+            <td>Вказує, що поле обов'язкове для заповнення.</td>
+        </tr>
+        <tr>
+            <td><code>disabled</code></td>
+            <td>Без значення або <code>"disabled"</code></td>
+            <td>Робить поле неактивним.</td>
+        </tr>
+        <tr>
+            <td><code>readonly</code></td>
+            <td>Без значення або <code>"readonly"</code></td>
+            <td>Робить поле доступним лише для читання.</td>
+        </tr>
+        <tr>
+            <td><code>min</code></td>
+            <td>Число або дата (наприклад, <code>"0"</code>, <code>"2023-01-01"</code>)</td>
+            <td>Мінімальне значення для поля.</td>
+        </tr>
+        <tr>
+            <td><code>max</code></td>
+            <td>Число або дата (наприклад, <code>"100"</code>, <code>"2023-12-31"</code>)</td>
+            <td>Максимальне значення для поля.</td>
+        </tr>
+        <tr>
+            <td><code>step</code></td>
+            <td>Число (наприклад, <code>"1"</code>, <code>"0.1"</code>)</td>
+            <td>Крок для збільшення/зменшення значення.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Атрибути для тегу <code>&lt;form&gt;</code> (форма)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>action</code></td>
+            <td>URL-адреса (наприклад, <code>"/submit"</code>)</td>
+            <td>Вказує, куди відправляти дані форми.</td>
+        </tr>
+        <tr>
+            <td><code>method</code></td>
+            <td><code>"get"</code>, <code>"post"</code></td>
+            <td>Вказує метод HTTP для відправки даних.</td>
+        </tr>
+        <tr>
+            <td><code>enctype</code></td>
+            <td><code>"application/x-www-form-urlencoded"</code>, <code>"multipart/form-data"</code>, <code>"text/plain"</code></td>
+            <td>Вказує спосіб кодування даних форми.</td>
+        </tr>
+        <tr>
+            <td><code>target</code></td>
+            <td><code>"_self"</code>, <code>"_blank"</code>, <code>"_parent"</code>, <code>"_top"</code></td>
+            <td>Вказує, де відкрити результат відправки форми.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Атрибути для тегу <code>&lt;video&gt;</code> (відео)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>src</code></td>
+            <td>URL-адреса відео (наприклад, <code>"video.mp4"</code>)</td>
+            <td>Вказує шлях до відеофайлу.</td>
+        </tr>
+        <tr>
+            <td><code>controls</code></td>
+            <td>Без значення або <code>"controls"</code></td>
+            <td>Додає елементи керування відео (пауза, гучність тощо).</td>
+        </tr>
+        <tr>
+            <td><code>autoplay</code></td>
+            <td>Без значення або <code>"autoplay"</code></td>
+            <td>Вказує, що відео почне відтворюватися автоматично.</td>
+        </tr>
+        <tr>
+            <td><code>loop</code></td>
+            <td>Без значення або <code>"loop"</code></td>
+            <td>Вказує, що відео буде повторюватися.</td>
+        </tr>
+        <tr>
+            <td><code>muted</code></td>
+            <td>Без значення або <code>"muted"</code></td>
+            <td>Вказує, що відео буде без звуку.</td>
+        </tr>
+        <tr>
+            <td><code>poster</code></td>
+            <td>URL-адреса зображення (наприклад, <code>"poster.jpg"</code>)</td>
+            <td>Вказує зображення, яке відображається до відтворення відео.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Атрибути для тегу <code>&lt;meta&gt;</code> (метадані)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>charset</code></td>
+            <td>Назва кодування (наприклад, <code>"UTF-8"</code>)</td>
+            <td>Вказує кодування символів документа.</td>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td><code>"description"</code>, <code>"keywords"</code>, <code>"author"</code>, <code>"viewport"</code></td>
+            <td>Вказує тип метаданих.</td>
+        </tr>
+        <tr>
+            <td><code>content</code></td>
+            <td>Будь-який текст (наприклад, <code>"Опис сторінки"</code>)</td>
+            <td>Вказує значення метаданих.</td>
+        </tr>
+        <tr>
+            <td><code>http-equiv</code></td>
+            <td><code>"refresh"</code>, <code>"content-type"</code>, <code>"default-style"</code></td>
+            <td>Вказує HTTP-заголовок для метаданих.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Атрибути для тегу <code>&lt;link&gt;</code> (зв'язок з ресурсами)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Атрибут</th>
+            <th>Можливі значення</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>rel</code></td>
+            <td><code>"stylesheet"</code>, <code>"icon"</code>, <code>"preload"</code>, <code>"alternate"</code></td>
+            <td>Вказує відношення між документом і ресурсом.</td>
+        </tr>
+        <tr>
+            <td><code>href</code></td>
+            <td>URL-адреса (наприклад, <code>"styles.css"</code>)</td>
+            <td>Вказує шлях до ресурсу.</td>
+        </tr>
+        <tr>
+            <td><code>type</code></td>
+            <td>MIME-тип (наприклад, <code>"text/css"</code>, <code>"image/x-icon"</code>)</td>
+            <td>Вказує тип ресурсу.</td>
+        </tr>
+        <tr>
+            <td><code>media</code></td>
+            <td>Медіа-запит (наприклад, <code>"screen"</code>, <code>"print"</code>)</td>
+            <td>Вказує, для яких пристроїв призначений ресурс.</td>
+        </tr>
+    </tbody>
+</table>
   </body>
 </html>
